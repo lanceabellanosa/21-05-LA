@@ -1,0 +1,2195 @@
+[gd_scene format=3 uid="uid://bp2rgrldhq2e6"]
+
+[ext_resource type="Texture2D" uid="uid://dc8mv2t8rtpjr" path="res://696.jpg" id="1_j0p05"]
+[ext_resource type="PackedScene" uid="uid://dsgkmt0xljcys" path="res://Scenes/player.tscn" id="1_xiqgv"]
+[ext_resource type="PackedScene" uid="uid://cdpps06tm62hg" path="res://Scenes/crypt_2.tscn" id="3_5nsto"]
+[ext_resource type="PackedScene" uid="uid://djkldwc45cxkm" path="res://Scenes/fixedroad.tscn" id="4_gjpho"]
+[ext_resource type="PackedScene" uid="uid://e2b8cyih46ll" path="res://Scenes/brick_wall_2.tscn" id="5_45d1s"]
+[ext_resource type="PackedScene" uid="uid://v1b1mfcxl1cc" path="res://Scenes/brick_wall_end_2.tscn" id="6_y7y61"]
+[ext_resource type="PackedScene" uid="uid://dstbv2v3cjqv4" path="res://Scenes/grave_2.tscn" id="7_y7y61"]
+[ext_resource type="PackedScene" uid="uid://dfvohgmw7mb0j" path="res://Scenes/gravestone_bevel_2.tscn" id="8_kn06e"]
+[ext_resource type="PackedScene" uid="uid://blyep4xjvvywp" path="res://Scenes/gravestone_broken_2.tscn" id="9_7yo87"]
+[ext_resource type="PackedScene" uid="uid://cogtjdwd45djd" path="res://Scenes/gravestone_cross_2.tscn" id="10_ti1bm"]
+[ext_resource type="PackedScene" uid="uid://qonoofaju1hd" path="res://Scenes/iron_fence_2.tscn" id="11_7yo87"]
+[ext_resource type="PackedScene" uid="uid://00e813daq7xp" path="res://Scenes/iron_fence_curve_2.tscn" id="12_op4cu"]
+[ext_resource type="PackedScene" uid="uid://4tdr0y5tj6n" path="res://Scenes/iron_fence_damaged_2.tscn" id="13_8l3nt"]
+[ext_resource type="PackedScene" uid="uid://bap3rcq2h4y3p" path="res://Scenes/urn_round_2.tscn" id="14_8l3nt"]
+[ext_resource type="PackedScene" uid="uid://byp2df8wtqcqe" path="res://Scenes/pine_crooked_2.tscn" id="15_kwl8l"]
+[ext_resource type="PackedScene" uid="uid://c2feb1m7w34xk" path="res://Scenes/hopes_and_dreams.tscn" id="16_xiqgv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j0p05"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_5nsto"]
+sky_material = SubResource("ProceduralSkyMaterial_j0p05")
+
+[sub_resource type="Environment" id="Environment_gjpho"]
+background_mode = 2
+sky = SubResource("Sky_5nsto")
+tonemap_mode = 2
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+volumetric_fog_albedo = Color(0.994017, 0.339113, 0.421366, 1)
+volumetric_fog_emission = Color(0.737151, 0.389163, 0.286816, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8l3nt"]
+albedo_color = Color(1, 0.52549, 0.360784, 1)
+emission_enabled = true
+emission = Color(1, 0.52549, 0.360784, 1)
+emission_energy_multiplier = 3.0
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_waglr"]
+vertices = PackedVector3Array(-63.171997, 2, -63.336395, -63.171997, 2, -61.336395, -57.171997, 2, -62.336395, -46.171997, 2, -63.336395, -46.171997, 2, -61.336395, -37.171997, 2, -60.336395, 47.828003, 2, -61.336395, 47.828003, 2, -63.336395, 61.828003, 2, 39.663605, 63.828003, 2, 47.663605, 63.828003, 2, -63.336395, 61.828003, 2, -63.336395, 63.828003, 2, 62.663605, 63.828003, 2, 60.663605, 60.828003, 2, 59.663605, -41.171997, 2, 60.663605, -63.171997, 2, 62.663605, -59.171997, 2, -45.336395, -60.171997, 2, -47.336395, -63.171997, 2, -47.336395, -60.171997, 2, 56.663605, -43.171997, 2, 55.663605, -51.171997, 2, 55.663605, -53.171997, 2, 58.663605, -58.171997, 2, 58.663605, -13.171997, 2, -13.336395, -12.171997, 2, -14.336395, -11.171997, 2, -16.336395, -11.171997, 2, -18.336395, -12.171997, 2, -20.336395, -15.171997, 2, -11.336395, 4.828003, 2, -46.336395, -45.171997, 2, -46.336395, -46.171997, 2, 4.6636047, -35.171997, 2, -1.3363953, -9.171997, 2, -20.336395, -38.171997, 2, 3.6636047, -19.171997, 2, -1.3363953, -8.171997, 2, -20.336395, 3.828003, 2, -20.336395, 9.828003, 2, -21.336395, 9.828003, 2, -16.336395, 11.828003, 2, -14.336395, -1.1719971, 2, -13.336395, 2.828003, 2, -10.336395, 10.828003, 2, -10.336395, 34.828003, 2, -1.3363953, 46.828003, 2, 2.6636047, 46.828003, 2, -45.336395, 37.828003, 2, 2.6636047, 17.828003, 2, -1.3363953, -7.171997, 2, -18.336395, 8.828003, 2, -15.336395, 4.828003, 2, -19.336395, -31.171997, 2, 8.663605, -33.171997, 2, 9.663605, -33.171997, 2, 10.663605, -31.171997, 2, 20.663605, -33.171997, 2, 21.663605, -33.171997, 2, 22.663605, -31.171997, 2, 23.663605, -28.171997, 2, 21.663605, -29.171997, 2, 8.663605, -31.171997, 2, 11.663605, -29.171997, 2, 11.663605, -27.171997, 2, 9.663605, -4.171997, 2, -10.336395, -6.171997, 2, -11.336395, -22.171997, 2, 0.66360474, -27.171997, 2, 1.6636047, -24.171997, 2, 3.6636047, -21.171997, 2, 3.6636047, -19.171997, 2, 2.6636047, 8.828003, 2, 4.6636047, 9.828003, 2, 6.6636047, 15.828003, 2, 6.6636047, 15.828003, 2, -0.33639526, -34.171997, 2, 1.6636047, -34.171997, 2, 3.6636047, -31.171997, 2, 3.6636047, -28.171997, 2, 1.6636047, -3.171997, 2, -8.336395, -5.171997, 2, -9.336395, -11.171997, 2, -8.336395, -26.171997, 2, 11.663605, -31.171997, 2, 26.663605, -28.171997, 2, 25.663605, -16.171997, 2, 0.66360474, -17.171997, 2, 12.663605, -15.171997, 2, 14.663605, -9.171997, 2, 4.6636047, -19.171997, 2, 11.663605, -21.171997, 2, 16.663605, -26.171997, 2, 22.663605, -27.171997, 2, 25.663605, -23.171997, 2, 25.663605, -24.171997, 2, 19.663605, -19.171997, 2, 15.663605, -9.171997, 2, -10.336395, 9.828003, 2, -8.336395, -29.171997, 2, 16.663605, -26.171997, 2, 16.663605, -22.171997, 2, 18.663605, -24.171997, 2, 16.663605, -22.171997, 2, 25.663605, -19.171997, 2, 25.663605, -14.171997, 2, 17.663605, -10.171997, 2, 22.663605, -16.171997, 2, 18.663605, -16.171997, 2, 22.663605, 26.828003, 2, 13.663605, 25.828003, 2, 15.663605, 28.828003, 2, 15.663605, 31.828003, 2, 13.663605, 28.828003, 2, 12.663605, 17.828003, 2, 13.663605, 15.828003, 2, 12.663605, 15.828003, 2, 16.663605, 17.828003, 2, 15.663605, 26.828003, 2, 5.6636047, 25.828003, 2, 10.663605, 27.828003, 2, 9.663605, 28.828003, 2, 4.6636047, 31.828003, 2, 1.6636047, 27.828003, 2, 1.6636047, 22.828003, 2, 25.663605, 20.828003, 2, 24.663605, 18.828003, 2, 25.663605, 26.828003, 2, 1.6636047, 22.828003, 2, 1.6636047, 32.828003, 2, 14.663605, 33.828003, 2, 20.663605, 36.828003, 2, 19.663605, 33.828003, 2, 12.663605, 9.828003, 2, 22.663605, 15.828003, 2, 22.663605, 36.828003, 2, 4.6636047, 32.828003, 2, 4.6636047, 32.828003, 2, 26.663605, 28.828003, 2, 24.663605, 25.828003, 2, 24.663605, 30.828003, 2, 24.663605, 30.828003, 2, 15.663605, 46.828003, 2, 23.663605, 37.828003, 2, 23.663605, 20.828003, 2, 2.6636047, 18.828003, 2, 2.6636047, -34.171997, 2, 7.6636047, -38.171997, 2, 7.6636047, -38.171997, 2, 23.663605, -20.171997, 2, 45.663605, -20.171997, 2, 29.663605, -36.171997, 2, 28.663605, -45.171997, 2, 45.663605, 5.828003, 2, 8.663605, 3.828003, 2, 8.663605, 2.828003, 2, 13.663605, 5.828003, 2, 20.663605, -2.171997, 2, 13.663605, -3.171997, 2, 8.663605, -6.171997, 2, 8.663605, -6.171997, 2, 20.663605, 8.828003, 2, 24.663605, 15.828003, 2, 27.663605, -9.171997, 2, 24.663605, -16.171997, 2, 27.663605, 19.828003, 2, 45.663605, 19.828003, 2, 29.663605, 37.828003, 2, 26.663605, 34.828003, 2, 29.663605, 45.828003, 2, 45.663605)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(6, 3, 7), PackedInt32Array(11, 10, 8), PackedInt32Array(8, 10, 9), PackedInt32Array(13, 12, 14), PackedInt32Array(14, 12, 15), PackedInt32Array(15, 12, 16), PackedInt32Array(18, 17, 19), PackedInt32Array(19, 17, 20), PackedInt32Array(19, 20, 16), PackedInt32Array(22, 21, 23), PackedInt32Array(23, 21, 15), PackedInt32Array(24, 16, 20), PackedInt32Array(24, 23, 16), PackedInt32Array(16, 23, 15), PackedInt32Array(25, 27, 26), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 25), PackedInt32Array(29, 25, 30), PackedInt32Array(34, 33, 29), PackedInt32Array(29, 33, 32), PackedInt32Array(29, 32, 31), PackedInt32Array(31, 35, 29), PackedInt32Array(34, 36, 33), PackedInt32Array(30, 37, 29), PackedInt32Array(29, 37, 34), PackedInt32Array(31, 39, 38), PackedInt32Array(31, 38, 35), PackedInt32Array(42, 41, 40), PackedInt32Array(45, 44, 42), PackedInt32Array(42, 44, 43), PackedInt32Array(46, 40, 47), PackedInt32Array(47, 40, 31), PackedInt32Array(47, 31, 48), PackedInt32Array(47, 49, 46), PackedInt32Array(50, 45, 42), PackedInt32Array(42, 40, 50), PackedInt32Array(50, 40, 46), PackedInt32Array(40, 39, 31), PackedInt32Array(38, 51, 35), PackedInt32Array(35, 51, 28), PackedInt32Array(28, 51, 27), PackedInt32Array(51, 53, 27), PackedInt32Array(27, 53, 52), PackedInt32Array(56, 55, 54), PackedInt32Array(58, 57, 59), PackedInt32Array(59, 57, 60), PackedInt32Array(60, 57, 61), PackedInt32Array(65, 64, 62), PackedInt32Array(62, 64, 63), PackedInt32Array(62, 63, 54), PackedInt32Array(54, 63, 56), PackedInt32Array(66, 67, 43), PackedInt32Array(72, 71, 68), PackedInt32Array(68, 71, 70), PackedInt32Array(68, 70, 69), PackedInt32Array(74, 73, 75), PackedInt32Array(75, 73, 76), PackedInt32Array(78, 77, 79), PackedInt32Array(79, 77, 80), PackedInt32Array(83, 82, 81), PackedInt32Array(84, 65, 70), PackedInt32Array(70, 65, 69), PackedInt32Array(85, 60, 86), PackedInt32Array(86, 60, 61), PackedInt32Array(89, 88, 90), PackedInt32Array(90, 88, 87), PackedInt32Array(90, 87, 83), PackedInt32Array(90, 83, 81), PackedInt32Array(81, 82, 66), PackedInt32Array(66, 82, 67), PackedInt32Array(72, 91, 71), PackedInt32Array(71, 91, 92), PackedInt32Array(94, 93, 95), PackedInt32Array(95, 93, 96), PackedInt32Array(88, 97, 91), PackedInt32Array(91, 97, 92), PackedInt32Array(96, 93, 61), PackedInt32Array(25, 26, 98), PackedInt32Array(98, 26, 67), PackedInt32Array(67, 26, 43), PackedInt32Array(54, 79, 62), PackedInt32Array(62, 79, 80), PackedInt32Array(89, 97, 88), PackedInt32Array(87, 37, 83), PackedInt32Array(83, 37, 30), PackedInt32Array(76, 99, 50), PackedInt32Array(50, 99, 45), PackedInt32Array(84, 64, 65), PackedInt32Array(64, 100, 63), PackedInt32Array(63, 100, 57), PackedInt32Array(76, 73, 99), PackedInt32Array(99, 73, 81), PackedInt32Array(81, 73, 90), PackedInt32Array(101, 96, 100), PackedInt32Array(100, 96, 61), PackedInt32Array(100, 61, 57), PackedInt32Array(102, 96, 103), PackedInt32Array(103, 96, 101), PackedInt32Array(92, 97, 102), PackedInt32Array(102, 97, 104), PackedInt32Array(104, 97, 105), PackedInt32Array(106, 89, 107), PackedInt32Array(107, 89, 90), PackedInt32Array(108, 106, 109), PackedInt32Array(109, 106, 107), PackedInt32Array(102, 103, 92), PackedInt32Array(101, 84, 103), PackedInt32Array(103, 84, 70), PackedInt32Array(111, 110, 112), PackedInt32Array(112, 110, 114), PackedInt32Array(112, 114, 113), PackedInt32Array(118, 117, 115), PackedInt32Array(115, 117, 116), PackedInt32Array(122, 121, 119), PackedInt32Array(119, 121, 120), PackedInt32Array(122, 124, 123), PackedInt32Array(120, 110, 111), PackedInt32Array(127, 126, 125), PackedInt32Array(128, 119, 129), PackedInt32Array(129, 119, 120), PackedInt32Array(131, 130, 132), PackedInt32Array(132, 130, 133), PackedInt32Array(114, 121, 113), PackedInt32Array(113, 121, 122), PackedInt32Array(113, 122, 123), PackedInt32Array(74, 75, 116), PackedInt32Array(117, 135, 134), PackedInt32Array(133, 137, 136), PackedInt32Array(127, 125, 138), PackedInt32Array(125, 140, 139), PackedInt32Array(142, 141, 112), PackedInt32Array(112, 141, 139), PackedInt32Array(141, 138, 139), PackedInt32Array(139, 138, 125), PackedInt32Array(133, 130, 113), PackedInt32Array(113, 130, 142), PackedInt32Array(113, 142, 112), PackedInt32Array(49, 47, 136), PackedInt32Array(136, 47, 133), PackedInt32Array(133, 47, 132), PackedInt32Array(132, 47, 143), PackedInt32Array(143, 144, 132), PackedInt32Array(127, 118, 126), PackedInt32Array(126, 118, 115), PackedInt32Array(126, 115, 146), PackedInt32Array(126, 146, 145), PackedInt32Array(125, 111, 140), PackedInt32Array(117, 134, 116), PackedInt32Array(116, 134, 74), PackedInt32Array(120, 111, 129), PackedInt32Array(129, 111, 125), PackedInt32Array(55, 56, 147), PackedInt32Array(147, 56, 148), PackedInt32Array(58, 59, 149), PackedInt32Array(151, 150, 152), PackedInt32Array(152, 150, 153), PackedInt32Array(33, 36, 148), PackedInt32Array(148, 56, 33), PackedInt32Array(33, 56, 58), PackedInt32Array(33, 58, 149), PackedInt32Array(152, 153, 149), PackedInt32Array(149, 153, 33), PackedInt32Array(155, 154, 156), PackedInt32Array(156, 154, 157), PackedInt32Array(159, 158, 160), PackedInt32Array(160, 158, 161), PackedInt32Array(156, 157, 158), PackedInt32Array(158, 157, 161), PackedInt32Array(134, 135, 162), PackedInt32Array(162, 135, 163), PackedInt32Array(107, 164, 109), PackedInt32Array(109, 164, 165), PackedInt32Array(151, 164, 150), PackedInt32Array(150, 164, 162), PackedInt32Array(150, 162, 167), PackedInt32Array(150, 167, 166), PackedInt32Array(164, 151, 165), PackedInt32Array(162, 163, 167), PackedInt32Array(168, 144, 143), PackedInt32Array(168, 143, 169), PackedInt32Array(169, 143, 170), PackedInt32Array(167, 169, 166), PackedInt32Array(166, 169, 170)]
+cell_size = 1.0
+cell_height = 1.0
+agent_height = 63.36
+agent_radius = 0.4
+agent_max_slope = 60.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5cjrv"]
+albedo_color = Color(0.303797, 0.500836, 0.354413, 1)
+albedo_texture = ExtResource("1_j0p05")
+uv1_triplanar = true
+
+[node name="World" type="Node3D" unique_id=1235573286]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1771879867]
+transform = Transform3D(-0.603208, -0.430887, 0.671175, 0, 0.841511, 0.54024, -0.797584, 0.325877, -0.507606, 0, 0, 0)
+light_color = Color(1, 0.792116, 0.524427, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2060112300]
+environment = SubResource("Environment_gjpho")
+
+[node name="player" parent="." unique_id=840290463 instance=ExtResource("1_xiqgv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.510465, 0)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1190063189]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.858, 83.6317, -70.7983)
+cast_shadow = 0
+radius = 20.0
+material = SubResource("StandardMaterial3D_8l3nt")
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1857645168]
+navigation_mesh = SubResource("NavigationMesh_waglr")
+
+[node name="RoadContainer" type="Node3D" parent="NavigationRegion3D" unique_id=1093472695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6132069, 0)
+
+[node name="road6" parent="NavigationRegion3D/RoadContainer" unique_id=1843118426 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, 1)
+
+[node name="road87" parent="NavigationRegion3D/RoadContainer" unique_id=867557947 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, -1)
+
+[node name="road88" parent="NavigationRegion3D/RoadContainer" unique_id=389519788 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, -2)
+
+[node name="road89" parent="NavigationRegion3D/RoadContainer" unique_id=721540645 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, -3)
+
+[node name="road91" parent="NavigationRegion3D/RoadContainer" unique_id=1918570439 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, -4)
+
+[node name="road92" parent="NavigationRegion3D/RoadContainer" unique_id=1849618501 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.884717, 0.387671, -4)
+
+[node name="road93" parent="NavigationRegion3D/RoadContainer" unique_id=632553010 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88472, 0.387671, -4)
+
+[node name="road94" parent="NavigationRegion3D/RoadContainer" unique_id=148078260 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88472, 0.387671, -4)
+
+[node name="road95" parent="NavigationRegion3D/RoadContainer" unique_id=1120602037 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88472, 0.387671, -4)
+
+[node name="road96" parent="NavigationRegion3D/RoadContainer" unique_id=362310413 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88472, 0.387671, -4)
+
+[node name="road97" parent="NavigationRegion3D/RoadContainer" unique_id=1950146615 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88472, 0.387671, -4)
+
+[node name="road98" parent="NavigationRegion3D/RoadContainer" unique_id=577067343 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.88472, 0.387671, -4)
+
+[node name="road99" parent="NavigationRegion3D/RoadContainer" unique_id=229681885 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.88472, 0.387671, -4)
+
+[node name="road100" parent="NavigationRegion3D/RoadContainer" unique_id=766385467 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88472, 0.387671, -4)
+
+[node name="road101" parent="NavigationRegion3D/RoadContainer" unique_id=668887462 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, -4)
+
+[node name="road103" parent="NavigationRegion3D/RoadContainer" unique_id=1213397010 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, -4)
+
+[node name="road113" parent="NavigationRegion3D/RoadContainer" unique_id=255950092 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1153, 0.387671, -4)
+
+[node name="road114" parent="NavigationRegion3D/RoadContainer" unique_id=2145025961 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -7)
+
+[node name="road115" parent="NavigationRegion3D/RoadContainer" unique_id=908124740 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -6)
+
+[node name="road116" parent="NavigationRegion3D/RoadContainer" unique_id=2131806197 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -5)
+
+[node name="road117" parent="NavigationRegion3D/RoadContainer" unique_id=1330822477 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -4)
+
+[node name="road120" parent="NavigationRegion3D/RoadContainer" unique_id=1399387694 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -11)
+
+[node name="road121" parent="NavigationRegion3D/RoadContainer" unique_id=1870544634 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -10)
+
+[node name="road122" parent="NavigationRegion3D/RoadContainer" unique_id=651150844 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -9)
+
+[node name="road123" parent="NavigationRegion3D/RoadContainer" unique_id=66462954 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -8)
+
+[node name="road124" parent="NavigationRegion3D/RoadContainer" unique_id=698088963 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -15)
+
+[node name="road125" parent="NavigationRegion3D/RoadContainer" unique_id=1951210671 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -14)
+
+[node name="road126" parent="NavigationRegion3D/RoadContainer" unique_id=1608204444 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -13)
+
+[node name="road127" parent="NavigationRegion3D/RoadContainer" unique_id=152693000 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -12)
+
+[node name="road128" parent="NavigationRegion3D/RoadContainer" unique_id=1624434867 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -19)
+
+[node name="road129" parent="NavigationRegion3D/RoadContainer" unique_id=142819967 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -18)
+
+[node name="road130" parent="NavigationRegion3D/RoadContainer" unique_id=563333810 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -17)
+
+[node name="road131" parent="NavigationRegion3D/RoadContainer" unique_id=1015840727 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -16)
+
+[node name="road132" parent="NavigationRegion3D/RoadContainer" unique_id=1982331259 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -23)
+
+[node name="road136" parent="NavigationRegion3D/RoadContainer" unique_id=1244817002 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1153, 0.387671, -23)
+
+[node name="road137" parent="NavigationRegion3D/RoadContainer" unique_id=353801713 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1153, 0.387671, -23)
+
+[node name="road138" parent="NavigationRegion3D/RoadContainer" unique_id=1827216303 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1153, 0.387671, -23)
+
+[node name="road139" parent="NavigationRegion3D/RoadContainer" unique_id=955221760 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, -23)
+
+[node name="road140" parent="NavigationRegion3D/RoadContainer" unique_id=1341358068 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.11528, 0.387671, -23)
+
+[node name="road141" parent="NavigationRegion3D/RoadContainer" unique_id=1228000452 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11528, 0.387671, -23)
+
+[node name="road142" parent="NavigationRegion3D/RoadContainer" unique_id=566769425 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11528, 0.387671, -23)
+
+[node name="road143" parent="NavigationRegion3D/RoadContainer" unique_id=297640477 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11528, 0.387671, -23)
+
+[node name="road144" parent="NavigationRegion3D/RoadContainer" unique_id=792444240 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11528, 0.387671, -23)
+
+[node name="road145" parent="NavigationRegion3D/RoadContainer" unique_id=1729078676 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11528, 0.387671, -23)
+
+[node name="road146" parent="NavigationRegion3D/RoadContainer" unique_id=667034861 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11528, 0.387671, -23)
+
+[node name="road147" parent="NavigationRegion3D/RoadContainer" unique_id=1975619830 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11528, 0.387671, -23)
+
+[node name="road148" parent="NavigationRegion3D/RoadContainer" unique_id=376658827 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11528, 0.387671, -23)
+
+[node name="road149" parent="NavigationRegion3D/RoadContainer" unique_id=1246556065 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, -23)
+
+[node name="road150" parent="NavigationRegion3D/RoadContainer" unique_id=1555525194 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.884717, 0.387671, -23)
+
+[node name="road151" parent="NavigationRegion3D/RoadContainer" unique_id=1726190345 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88472, 0.387671, -23)
+
+[node name="road152" parent="NavigationRegion3D/RoadContainer" unique_id=1597030605 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88472, 0.387671, -23)
+
+[node name="road153" parent="NavigationRegion3D/RoadContainer" unique_id=665135591 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88472, 0.387671, -23)
+
+[node name="road154" parent="NavigationRegion3D/RoadContainer" unique_id=1629686245 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88472, 0.387671, -23)
+
+[node name="road155" parent="NavigationRegion3D/RoadContainer" unique_id=2134009950 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88472, 0.387671, -23)
+
+[node name="road156" parent="NavigationRegion3D/RoadContainer" unique_id=1553788815 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.88472, 0.387671, -23)
+
+[node name="road157" parent="NavigationRegion3D/RoadContainer" unique_id=526576725 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.88472, 0.387671, -23)
+
+[node name="road158" parent="NavigationRegion3D/RoadContainer" unique_id=2013802044 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88472, 0.387671, -23)
+
+[node name="road159" parent="NavigationRegion3D/RoadContainer" unique_id=2092977470 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, -23)
+
+[node name="road160" parent="NavigationRegion3D/RoadContainer" unique_id=1262849304 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8847, 0.387671, -23)
+
+[node name="road161" parent="NavigationRegion3D/RoadContainer" unique_id=1943078484 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8847, 0.387671, -23)
+
+[node name="road162" parent="NavigationRegion3D/RoadContainer" unique_id=661312993 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -23)
+
+[node name="road163" parent="NavigationRegion3D/RoadContainer" unique_id=977974368 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -22)
+
+[node name="road164" parent="NavigationRegion3D/RoadContainer" unique_id=165235978 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -21)
+
+[node name="road165" parent="NavigationRegion3D/RoadContainer" unique_id=1925295147 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -20)
+
+[node name="road166" parent="NavigationRegion3D/RoadContainer" unique_id=861255645 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -19)
+
+[node name="road167" parent="NavigationRegion3D/RoadContainer" unique_id=1913569952 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -18)
+
+[node name="road168" parent="NavigationRegion3D/RoadContainer" unique_id=125575349 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -17)
+
+[node name="road169" parent="NavigationRegion3D/RoadContainer" unique_id=781882771 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -16)
+
+[node name="road170" parent="NavigationRegion3D/RoadContainer" unique_id=407708167 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -15)
+
+[node name="road171" parent="NavigationRegion3D/RoadContainer" unique_id=2070324966 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -14)
+
+[node name="road172" parent="NavigationRegion3D/RoadContainer" unique_id=2107712189 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -13)
+
+[node name="road173" parent="NavigationRegion3D/RoadContainer" unique_id=459726410 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -12)
+
+[node name="road174" parent="NavigationRegion3D/RoadContainer" unique_id=1542579109 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -11)
+
+[node name="road175" parent="NavigationRegion3D/RoadContainer" unique_id=1136280074 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -10)
+
+[node name="road176" parent="NavigationRegion3D/RoadContainer" unique_id=366977006 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -9)
+
+[node name="road177" parent="NavigationRegion3D/RoadContainer" unique_id=1956487238 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -8)
+
+[node name="road178" parent="NavigationRegion3D/RoadContainer" unique_id=497983706 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -7)
+
+[node name="road179" parent="NavigationRegion3D/RoadContainer" unique_id=580465604 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -6)
+
+[node name="road180" parent="NavigationRegion3D/RoadContainer" unique_id=1739123596 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -5)
+
+[node name="road181" parent="NavigationRegion3D/RoadContainer" unique_id=734395483 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, -4)
+
+[node name="road182" parent="NavigationRegion3D/RoadContainer" unique_id=1110843249 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8847, 0.387671, -4)
+
+[node name="road183" parent="NavigationRegion3D/RoadContainer" unique_id=237424902 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8847, 0.387671, -4)
+
+[node name="road133" parent="NavigationRegion3D/RoadContainer" unique_id=1167603479 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -22)
+
+[node name="road134" parent="NavigationRegion3D/RoadContainer" unique_id=838926014 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -21)
+
+[node name="road135" parent="NavigationRegion3D/RoadContainer" unique_id=1210689159 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, -20)
+
+[node name="road118" parent="NavigationRegion3D/RoadContainer" unique_id=768013251 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1153, 0.387671, -4)
+
+[node name="road119" parent="NavigationRegion3D/RoadContainer" unique_id=852117603 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1153, 0.387671, -4)
+
+[node name="road104" parent="NavigationRegion3D/RoadContainer" unique_id=368486564 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.11528, 0.387671, -4)
+
+[node name="road105" parent="NavigationRegion3D/RoadContainer" unique_id=1856293374 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11528, 0.387671, -4)
+
+[node name="road106" parent="NavigationRegion3D/RoadContainer" unique_id=614132631 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11528, 0.387671, -4)
+
+[node name="road107" parent="NavigationRegion3D/RoadContainer" unique_id=1145102638 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11528, 0.387671, -4)
+
+[node name="road108" parent="NavigationRegion3D/RoadContainer" unique_id=34223552 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11528, 0.387671, -4)
+
+[node name="road109" parent="NavigationRegion3D/RoadContainer" unique_id=809372055 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11528, 0.387671, -4)
+
+[node name="road110" parent="NavigationRegion3D/RoadContainer" unique_id=1910436645 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11528, 0.387671, -4)
+
+[node name="road111" parent="NavigationRegion3D/RoadContainer" unique_id=2008200563 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11528, 0.387671, -4)
+
+[node name="road112" parent="NavigationRegion3D/RoadContainer" unique_id=2097261593 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11528, 0.387671, -4)
+
+[node name="road5" parent="NavigationRegion3D/RoadContainer" unique_id=722570394 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, 2)
+
+[node name="road4" parent="NavigationRegion3D/RoadContainer" unique_id=1529620312 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, 3)
+
+[node name="road3" parent="NavigationRegion3D/RoadContainer" unique_id=181088477 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, 4)
+
+[node name="road8" parent="NavigationRegion3D/RoadContainer" unique_id=1336257046 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11528, 0.387671, 4)
+
+[node name="road9" parent="NavigationRegion3D/RoadContainer" unique_id=1319975852 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11528, 0.387671, 4)
+
+[node name="road11" parent="NavigationRegion3D/RoadContainer" unique_id=881400032 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11528, 0.387671, 4)
+
+[node name="road12" parent="NavigationRegion3D/RoadContainer" unique_id=295739677 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11528, 0.387671, 4)
+
+[node name="road13" parent="NavigationRegion3D/RoadContainer" unique_id=351733127 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11528, 0.387671, 4)
+
+[node name="road14" parent="NavigationRegion3D/RoadContainer" unique_id=714681792 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11528, 0.387671, 4)
+
+[node name="road44" parent="NavigationRegion3D/RoadContainer" unique_id=1060107531 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11528, 0.387671, 4)
+
+[node name="road45" parent="NavigationRegion3D/RoadContainer" unique_id=1919069744 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11528, 0.387671, 4)
+
+[node name="road46" parent="NavigationRegion3D/RoadContainer" unique_id=1181613711 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.11528, 0.387671, 4)
+
+[node name="road47" parent="NavigationRegion3D/RoadContainer" unique_id=1354042293 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 4)
+
+[node name="road48" parent="NavigationRegion3D/RoadContainer" unique_id=1538453238 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 5)
+
+[node name="road49" parent="NavigationRegion3D/RoadContainer" unique_id=830336709 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 6)
+
+[node name="road50" parent="NavigationRegion3D/RoadContainer" unique_id=1051157200 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 7)
+
+[node name="road51" parent="NavigationRegion3D/RoadContainer" unique_id=150735966 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 8)
+
+[node name="road52" parent="NavigationRegion3D/RoadContainer" unique_id=1023763833 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 9)
+
+[node name="road53" parent="NavigationRegion3D/RoadContainer" unique_id=1899926923 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 10)
+
+[node name="road54" parent="NavigationRegion3D/RoadContainer" unique_id=1677324110 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 11)
+
+[node name="road55" parent="NavigationRegion3D/RoadContainer" unique_id=449049883 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 12)
+
+[node name="road56" parent="NavigationRegion3D/RoadContainer" unique_id=2069388720 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 13)
+
+[node name="road57" parent="NavigationRegion3D/RoadContainer" unique_id=437569090 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 14)
+
+[node name="road90" parent="NavigationRegion3D/RoadContainer" unique_id=421310916 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1153, 0.387671, 14)
+
+[node name="road102" parent="NavigationRegion3D/RoadContainer" unique_id=2134315263 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1153, 0.387671, 14)
+
+[node name="road184" parent="NavigationRegion3D/RoadContainer" unique_id=1504839525 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1153, 0.387671, 14)
+
+[node name="road185" parent="NavigationRegion3D/RoadContainer" unique_id=91757192 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.1153, 0.387671, 14)
+
+[node name="road186" parent="NavigationRegion3D/RoadContainer" unique_id=742714644 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1153, 0.387671, 14)
+
+[node name="road187" parent="NavigationRegion3D/RoadContainer" unique_id=1873717489 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1153, 0.387671, 14)
+
+[node name="road188" parent="NavigationRegion3D/RoadContainer" unique_id=1881652979 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1153, 0.387671, 14)
+
+[node name="road189" parent="NavigationRegion3D/RoadContainer" unique_id=811356162 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1153, 0.387671, 15)
+
+[node name="road190" parent="NavigationRegion3D/RoadContainer" unique_id=1908615987 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1153, 0.387671, 13)
+
+[node name="road58" parent="NavigationRegion3D/RoadContainer" unique_id=1546800117 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 15)
+
+[node name="road59" parent="NavigationRegion3D/RoadContainer" unique_id=1475336318 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 16)
+
+[node name="road60" parent="NavigationRegion3D/RoadContainer" unique_id=117228017 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 17)
+
+[node name="road61" parent="NavigationRegion3D/RoadContainer" unique_id=1373096378 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 18)
+
+[node name="road62" parent="NavigationRegion3D/RoadContainer" unique_id=372047061 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 19)
+
+[node name="road63" parent="NavigationRegion3D/RoadContainer" unique_id=1274649480 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 20)
+
+[node name="road64" parent="NavigationRegion3D/RoadContainer" unique_id=1542776949 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 21)
+
+[node name="road65" parent="NavigationRegion3D/RoadContainer" unique_id=566289668 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 22)
+
+[node name="road66" parent="NavigationRegion3D/RoadContainer" unique_id=463035569 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 23)
+
+[node name="road67" parent="NavigationRegion3D/RoadContainer" unique_id=1908491052 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1153, 0.387671, 24)
+
+[node name="road68" parent="NavigationRegion3D/RoadContainer" unique_id=1871264652 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.11528, 0.387671, 24)
+
+[node name="road69" parent="NavigationRegion3D/RoadContainer" unique_id=1341183177 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11528, 0.387671, 24)
+
+[node name="road70" parent="NavigationRegion3D/RoadContainer" unique_id=820305226 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.11528, 0.387671, 24)
+
+[node name="road71" parent="NavigationRegion3D/RoadContainer" unique_id=591934287 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11528, 0.387671, 24)
+
+[node name="road72" parent="NavigationRegion3D/RoadContainer" unique_id=102262655 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11528, 0.387671, 24)
+
+[node name="road73" parent="NavigationRegion3D/RoadContainer" unique_id=365263444 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11528, 0.387671, 24)
+
+[node name="road74" parent="NavigationRegion3D/RoadContainer" unique_id=58417983 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.11528, 0.387671, 24)
+
+[node name="road75" parent="NavigationRegion3D/RoadContainer" unique_id=1519583608 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11528, 0.387671, 24)
+
+[node name="road76" parent="NavigationRegion3D/RoadContainer" unique_id=562381719 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11528, 0.387671, 24)
+
+[node name="road77" parent="NavigationRegion3D/RoadContainer" unique_id=1239380084 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, 24)
+
+[node name="road78" parent="NavigationRegion3D/RoadContainer" unique_id=1539802218 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.884717, 0.387671, 24)
+
+[node name="road79" parent="NavigationRegion3D/RoadContainer" unique_id=931500872 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88472, 0.387671, 24)
+
+[node name="road80" parent="NavigationRegion3D/RoadContainer" unique_id=1248684724 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88472, 0.387671, 24)
+
+[node name="road81" parent="NavigationRegion3D/RoadContainer" unique_id=324362337 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88472, 0.387671, 24)
+
+[node name="road82" parent="NavigationRegion3D/RoadContainer" unique_id=1502268825 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88472, 0.387671, 24)
+
+[node name="road83" parent="NavigationRegion3D/RoadContainer" unique_id=1345566013 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88472, 0.387671, 24)
+
+[node name="road84" parent="NavigationRegion3D/RoadContainer" unique_id=517536438 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.88472, 0.387671, 24)
+
+[node name="road85" parent="NavigationRegion3D/RoadContainer" unique_id=869041129 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.88472, 0.387671, 24)
+
+[node name="road86" parent="NavigationRegion3D/RoadContainer" unique_id=1263471432 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88472, 0.387671, 24)
+
+[node name="road7" parent="NavigationRegion3D/RoadContainer" unique_id=1913334753 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.884717, 0.387671, 4)
+
+[node name="road10" parent="NavigationRegion3D/RoadContainer" unique_id=836937522 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88472, 0.387671, 4)
+
+[node name="road15" parent="NavigationRegion3D/RoadContainer" unique_id=505031121 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88472, 0.387671, 4)
+
+[node name="road16" parent="NavigationRegion3D/RoadContainer" unique_id=480777346 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88472, 0.387671, 4)
+
+[node name="road17" parent="NavigationRegion3D/RoadContainer" unique_id=1411921699 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.88472, 0.387671, 4)
+
+[node name="road18" parent="NavigationRegion3D/RoadContainer" unique_id=114694350 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.88472, 0.387671, 4)
+
+[node name="road19" parent="NavigationRegion3D/RoadContainer" unique_id=1418767465 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.88472, 0.387671, 4)
+
+[node name="road20" parent="NavigationRegion3D/RoadContainer" unique_id=311574523 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.88472, 0.387671, 4)
+
+[node name="road21" parent="NavigationRegion3D/RoadContainer" unique_id=806579573 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.88472, 0.387671, 4)
+
+[node name="road22" parent="NavigationRegion3D/RoadContainer" unique_id=40177865 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 4)
+
+[node name="road23" parent="NavigationRegion3D/RoadContainer" unique_id=1495918279 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 5)
+
+[node name="road24" parent="NavigationRegion3D/RoadContainer" unique_id=1455625313 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 6)
+
+[node name="road25" parent="NavigationRegion3D/RoadContainer" unique_id=120550569 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 7)
+
+[node name="road26" parent="NavigationRegion3D/RoadContainer" unique_id=1063629941 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 8)
+
+[node name="road27" parent="NavigationRegion3D/RoadContainer" unique_id=54470191 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 9)
+
+[node name="road28" parent="NavigationRegion3D/RoadContainer" unique_id=696649775 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 9)
+
+[node name="road29" parent="NavigationRegion3D/RoadContainer" unique_id=527304558 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 10)
+
+[node name="road30" parent="NavigationRegion3D/RoadContainer" unique_id=1967435113 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 11)
+
+[node name="road31" parent="NavigationRegion3D/RoadContainer" unique_id=13485991 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 12)
+
+[node name="road32" parent="NavigationRegion3D/RoadContainer" unique_id=235373918 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 13)
+
+[node name="road33" parent="NavigationRegion3D/RoadContainer" unique_id=1839828199 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 14)
+
+[node name="road191" parent="NavigationRegion3D/RoadContainer" unique_id=93214403 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8847, 0.387671, 14)
+
+[node name="road192" parent="NavigationRegion3D/RoadContainer" unique_id=355082776 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8847, 0.387671, 14)
+
+[node name="road193" parent="NavigationRegion3D/RoadContainer" unique_id=1909969394 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8847, 0.387671, 14)
+
+[node name="road194" parent="NavigationRegion3D/RoadContainer" unique_id=1424789089 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8847, 0.387671, 14)
+
+[node name="road195" parent="NavigationRegion3D/RoadContainer" unique_id=1697832103 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8847, 0.387671, 14)
+
+[node name="road196" parent="NavigationRegion3D/RoadContainer" unique_id=266801896 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8847, 0.387671, 14)
+
+[node name="road197" parent="NavigationRegion3D/RoadContainer" unique_id=1999941542 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8847, 0.387671, 14)
+
+[node name="road198" parent="NavigationRegion3D/RoadContainer" unique_id=55197818 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8847, 0.387671, 14)
+
+[node name="road200" parent="NavigationRegion3D/RoadContainer" unique_id=18936841 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8847, 0.387671, 13)
+
+[node name="road199" parent="NavigationRegion3D/RoadContainer" unique_id=1785065120 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8847, 0.387671, 15)
+
+[node name="road34" parent="NavigationRegion3D/RoadContainer" unique_id=1530926225 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 15)
+
+[node name="road35" parent="NavigationRegion3D/RoadContainer" unique_id=1315250114 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 16)
+
+[node name="road36" parent="NavigationRegion3D/RoadContainer" unique_id=1168206152 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 17)
+
+[node name="road37" parent="NavigationRegion3D/RoadContainer" unique_id=221051652 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 18)
+
+[node name="road38" parent="NavigationRegion3D/RoadContainer" unique_id=544608153 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 19)
+
+[node name="road39" parent="NavigationRegion3D/RoadContainer" unique_id=792491500 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 20)
+
+[node name="road40" parent="NavigationRegion3D/RoadContainer" unique_id=858461351 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 21)
+
+[node name="road41" parent="NavigationRegion3D/RoadContainer" unique_id=1062201276 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 22)
+
+[node name="road42" parent="NavigationRegion3D/RoadContainer" unique_id=1208976040 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 23)
+
+[node name="road43" parent="NavigationRegion3D/RoadContainer" unique_id=166136823 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.88472, 0.387671, 24)
+
+[node name="road2" parent="NavigationRegion3D/RoadContainer" unique_id=1377358032 instance=ExtResource("4_gjpho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115283, 0.387671, 5)
+
+[node name="Wall Container" type="Node3D" parent="NavigationRegion3D" unique_id=1552639484]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="brick-wall-end2" parent="NavigationRegion3D/Wall Container" unique_id=1280168014 instance=ExtResource("6_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48532, 0, 7.97611)
+
+[node name="brick-wall-end7" parent="NavigationRegion3D/Wall Container" unique_id=1491905414 instance=ExtResource("6_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48532, 0, 23.9761)
+
+[node name="brick-wall2" parent="NavigationRegion3D/Wall Container" unique_id=1483839591 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 5, 0, 9)
+
+[node name="brick-wall10" parent="NavigationRegion3D/Wall Container" unique_id=1070908552 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 5, 0, 25)
+
+[node name="brick-wall11" parent="NavigationRegion3D/Wall Container" unique_id=1182399372 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 3, 0, 25)
+
+[node name="brick-wall12" parent="NavigationRegion3D/Wall Container" unique_id=266226550 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 1, 0, 25)
+
+[node name="brick-wall13" parent="NavigationRegion3D/Wall Container" unique_id=355351215 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -1, 0, 25)
+
+[node name="brick-wall14" parent="NavigationRegion3D/Wall Container" unique_id=463973326 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -3, 0, 25)
+
+[node name="brick-wall15" parent="NavigationRegion3D/Wall Container" unique_id=1682550154 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -5, 0, 25)
+
+[node name="brick-wall4" parent="NavigationRegion3D/Wall Container" unique_id=1972662495 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 9.69814)
+
+[node name="brick-wall5" parent="NavigationRegion3D/Wall Container" unique_id=1698226618 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 11.6981)
+
+[node name="brick-wall6" parent="NavigationRegion3D/Wall Container" unique_id=1755976301 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 13.6981)
+
+[node name="brick-wall7" parent="NavigationRegion3D/Wall Container" unique_id=1957745845 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 15.6981)
+
+[node name="brick-wall8" parent="NavigationRegion3D/Wall Container" unique_id=1546131294 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 17.6981)
+
+[node name="brick-wall16" parent="NavigationRegion3D/Wall Container" unique_id=1168703573 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 19.6981)
+
+[node name="brick-wall17" parent="NavigationRegion3D/Wall Container" unique_id=560568716 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 19.6981)
+
+[node name="brick-wall18" parent="NavigationRegion3D/Wall Container" unique_id=1183820450 instance=ExtResource("5_45d1s")]
+transform = Transform3D(3.27835e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, 3.27835e-07, -5.67161, 0, 19.3363)
+
+[node name="brick-wall19" parent="NavigationRegion3D/Wall Container" unique_id=1118923527 instance=ExtResource("5_45d1s")]
+transform = Transform3D(3.27835e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, 3.27835e-07, -5.67161, 0, 17.3363)
+
+[node name="brick-wall20" parent="NavigationRegion3D/Wall Container" unique_id=1268006185 instance=ExtResource("5_45d1s")]
+transform = Transform3D(3.27835e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, 3.27835e-07, -5.67161, 0, 15.3363)
+
+[node name="brick-wall21" parent="NavigationRegion3D/Wall Container" unique_id=651141099 instance=ExtResource("5_45d1s")]
+transform = Transform3D(3.27835e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, 3.27835e-07, -5.67161, 0, 13.3363)
+
+[node name="brick-wall22" parent="NavigationRegion3D/Wall Container" unique_id=553564192 instance=ExtResource("5_45d1s")]
+transform = Transform3D(3.27835e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, 3.27835e-07, -5.67161, 0, 11.3363)
+
+[node name="brick-wall23" parent="NavigationRegion3D/Wall Container" unique_id=1430994356 instance=ExtResource("5_45d1s")]
+transform = Transform3D(3.27835e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, 3.27835e-07, -5.67161, 0, 9.33633)
+
+[node name="brick-wall24" parent="NavigationRegion3D/Wall Container" unique_id=223612970 instance=ExtResource("5_45d1s")]
+transform = Transform3D(3.27835e-07, 0, 2.5, 0, 2.5, 0, -2.5, 0, 3.27835e-07, -5.67161, 0, 7.33633)
+
+[node name="brick-wall9" parent="NavigationRegion3D/Wall Container" unique_id=627364038 instance=ExtResource("5_45d1s")]
+transform = Transform3D(-1.09278e-07, 0, -2.5, 0, 2.5, 0, 2.5, 0, -1.09278e-07, 5.66919, 0, 17.6981)
+
+[node name="brick-wall3" parent="NavigationRegion3D/Wall Container" unique_id=1528271552 instance=ExtResource("5_45d1s")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -5, 0, 9)
+
+[node name="brick-wall-end3" parent="NavigationRegion3D/Wall Container" unique_id=844920561 instance=ExtResource("6_y7y61")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.49254, 0, 5.02514)
+
+[node name="brick-wall-end5" parent="NavigationRegion3D/Wall Container" unique_id=316066195 instance=ExtResource("6_y7y61")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.49254, 0, 21.0251)
+
+[node name="brick-wall-end4" parent="NavigationRegion3D/Wall Container" unique_id=1183521808 instance=ExtResource("6_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.7012, 0, 7.20367)
+
+[node name="brick-wall-end6" parent="NavigationRegion3D/Wall Container" unique_id=163917776 instance=ExtResource("6_y7y61")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 9.65406, 0, 21.8108)
+
+[node name="brick-wall-end8" parent="NavigationRegion3D/Wall Container" unique_id=1920279670 instance=ExtResource("6_y7y61")]
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -6.69489, 0, 21.8108)
+
+[node name="Gravestone Container" type="Node3D" parent="NavigationRegion3D" unique_id=620835114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6204462, 0)
+
+[node name="gravestone-bevel2" parent="NavigationRegion3D/Gravestone Container" unique_id=982535997 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.401248, -10)
+
+[node name="gravestone-bevel3" parent="NavigationRegion3D/Gravestone Container" unique_id=1821421744 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.401248, -15)
+
+[node name="gravestone-bevel12" parent="NavigationRegion3D/Gravestone Container" unique_id=1556182621 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.401248, -10)
+
+[node name="gravestone-bevel13" parent="NavigationRegion3D/Gravestone Container" unique_id=552068098 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.401248, -10)
+
+[node name="gravestone-bevel14" parent="NavigationRegion3D/Gravestone Container" unique_id=1107602003 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.401248, -10)
+
+[node name="gravestone-bevel16" parent="NavigationRegion3D/Gravestone Container" unique_id=1457480170 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.401248, -15)
+
+[node name="gravestone-bevel19" parent="NavigationRegion3D/Gravestone Container" unique_id=1402883995 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.401248, -15)
+
+[node name="gravestone-bevel17" parent="NavigationRegion3D/Gravestone Container" unique_id=1663759069 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.401248, -15)
+
+[node name="gravestone-bevel5" parent="NavigationRegion3D/Gravestone Container" unique_id=2036145153 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.401248, -20)
+
+[node name="gravestone-bevel6" parent="NavigationRegion3D/Gravestone Container" unique_id=2077149911 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.401248, -20)
+
+[node name="gravestone-bevel8" parent="NavigationRegion3D/Gravestone Container" unique_id=1654575965 instance=ExtResource("8_kn06e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.401248, -20)
+
+[node name="gravestone-broken2" parent="NavigationRegion3D/Gravestone Container" unique_id=2096134177 instance=ExtResource("9_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.385886, -10)
+
+[node name="gravestone-broken3" parent="NavigationRegion3D/Gravestone Container" unique_id=1606929651 instance=ExtResource("9_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.385886, -10)
+
+[node name="gravestone-broken4" parent="NavigationRegion3D/Gravestone Container" unique_id=2050904593 instance=ExtResource("9_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.385886, -20)
+
+[node name="gravestone-broken5" parent="NavigationRegion3D/Gravestone Container" unique_id=101825711 instance=ExtResource("9_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.385886, -20)
+
+[node name="gravestone-cross2" parent="NavigationRegion3D/Gravestone Container" unique_id=388484245 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.381563, -15)
+
+[node name="gravestone-cross3" parent="NavigationRegion3D/Gravestone Container" unique_id=1789310678 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.381563, -15)
+
+[node name="gravestone-cross4" parent="NavigationRegion3D/Gravestone Container" unique_id=557507675 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.381563, -20)
+
+[node name="gravestone-cross5" parent="NavigationRegion3D/Gravestone Container" unique_id=1414599473 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.381563, -15)
+
+[node name="Right Grave Group" type="Node3D" parent="NavigationRegion3D" unique_id=1532859224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+metadata/_edit_group_ = true
+
+[node name="grave20" parent="NavigationRegion3D/Right Grave Group" unique_id=1650969536 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 12)
+
+[node name="grave21" parent="NavigationRegion3D/Right Grave Group" unique_id=1314845648 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 8)
+
+[node name="grave22" parent="NavigationRegion3D/Right Grave Group" unique_id=1127788411 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 4)
+
+[node name="grave23" parent="NavigationRegion3D/Right Grave Group" unique_id=1047536989 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 16)
+
+[node name="grave24" parent="NavigationRegion3D/Right Grave Group" unique_id=2078312117 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 20)
+
+[node name="grave25" parent="NavigationRegion3D/Right Grave Group" unique_id=1868956944 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 24)
+
+[node name="grave26" parent="NavigationRegion3D/Right Grave Group" unique_id=1973984426 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 24)
+
+[node name="grave27" parent="NavigationRegion3D/Right Grave Group" unique_id=1902674443 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 20)
+
+[node name="grave28" parent="NavigationRegion3D/Right Grave Group" unique_id=2051029254 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 16)
+
+[node name="grave29" parent="NavigationRegion3D/Right Grave Group" unique_id=328529293 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 12)
+
+[node name="grave30" parent="NavigationRegion3D/Right Grave Group" unique_id=1695509575 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 8)
+
+[node name="grave31" parent="NavigationRegion3D/Right Grave Group" unique_id=272104141 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 4)
+
+[node name="grave32" parent="NavigationRegion3D/Right Grave Group" unique_id=590020519 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 4)
+
+[node name="grave34" parent="NavigationRegion3D/Right Grave Group" unique_id=5371830 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 12)
+
+[node name="grave35" parent="NavigationRegion3D/Right Grave Group" unique_id=862853350 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 16)
+
+[node name="grave36" parent="NavigationRegion3D/Right Grave Group" unique_id=325820435 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 20)
+
+[node name="grave37" parent="NavigationRegion3D/Right Grave Group" unique_id=786630734 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 24)
+
+[node name="iron-fence2" parent="NavigationRegion3D/Right Grave Group" unique_id=1374222954 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.7048, 0.398468, 18.3361)
+
+[node name="iron-fence16" parent="NavigationRegion3D/Right Grave Group" unique_id=1538851815 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-0.5, -0.866025, 5.97109e-08, -4.37114e-08, -4.37114e-08, -1, 0.866025, -0.5, -1.59995e-08, -39.3045, -0.815248, 8.3361)
+
+[node name="iron-fence20" parent="NavigationRegion3D/Right Grave Group" unique_id=1962091112 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-0.258819, -0.965926, 5.35353e-08, -4.37114e-08, -4.37114e-08, -1, 0.965926, -0.258819, -3.09086e-08, -42.3045, -0.815248, 12.3361)
+
+[node name="iron-fence21" parent="NavigationRegion3D/Right Grave Group" unique_id=409665968 instance=ExtResource("11_7yo87")]
+transform = Transform3D(0.258819, -0.965926, 3.09086e-08, -4.37114e-08, -4.37114e-08, -1, 0.965926, 0.258819, -5.35353e-08, -40.3045, -0.815248, 18.3361)
+
+[node name="iron-fence22" parent="NavigationRegion3D/Right Grave Group" unique_id=294666739 instance=ExtResource("11_7yo87")]
+transform = Transform3D(0.707107, -0.707107, 0, -4.37114e-08, -4.37114e-08, -1, 0.707107, 0.707107, -6.18172e-08, -38.3045, -0.815248, 22.3361)
+
+[node name="iron-fence10" parent="NavigationRegion3D/Right Grave Group" unique_id=1594612463 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7048, 0.398468, 1.33252)
+
+[node name="iron-fence7" parent="NavigationRegion3D/Right Grave Group" unique_id=1055665704 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7048, 0.398468, 28.937)
+
+[node name="iron-fence4" parent="NavigationRegion3D/Right Grave Group" unique_id=590464236 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.7048, 0.398468, 22.3361)
+
+[node name="iron-fence5" parent="NavigationRegion3D/Right Grave Group" unique_id=1041863815 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.7048, 0.398468, 5.3361)
+
+[node name="iron-fence-curve2" parent="NavigationRegion3D/Right Grave Group" unique_id=1195972048 instance=ExtResource("12_op4cu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.7055, 0.398468, 26.3408)
+
+[node name="iron-fence-curve5" parent="NavigationRegion3D/Right Grave Group" unique_id=1780446126 instance=ExtResource("12_op4cu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -34.7055, 0.398468, 26.3408)
+
+[node name="iron-fence-curve3" parent="NavigationRegion3D/Right Grave Group" unique_id=796310786 instance=ExtResource("12_op4cu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -18.7055, 0.398468, 1.33943)
+
+[node name="iron-fence-curve4" parent="NavigationRegion3D/Right Grave Group" unique_id=51827086 instance=ExtResource("12_op4cu")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -34.7055, 0.398468, 1.33943)
+
+[node name="iron-fence-damaged2" parent="NavigationRegion3D/Right Grave Group" unique_id=361096377 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7029, 0.404415, 1.32982)
+
+[node name="iron-fence-damaged6" parent="NavigationRegion3D/Right Grave Group" unique_id=172227034 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7029, 0.404415, 1.32982)
+
+[node name="iron-fence-damaged3" parent="NavigationRegion3D/Right Grave Group" unique_id=866416067 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.1087, 0.404417, 9.33426)
+
+[node name="iron-fence-damaged4" parent="NavigationRegion3D/Right Grave Group" unique_id=1146566460 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7109, 0.404415, 28.9374)
+
+[node name="iron-fence-damaged5" parent="NavigationRegion3D/Right Grave Group" unique_id=610334464 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7109, 0.404415, 28.9374)
+
+[node name="iron-fence-damaged7" parent="NavigationRegion3D/Right Grave Group" unique_id=1139228590 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -34.6961, 0.404416, 5.2745)
+
+[node name="gravestone-bevel4" parent="NavigationRegion3D/Right Grave Group" unique_id=1899969014 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 24.0029)
+
+[node name="gravestone-bevel7" parent="NavigationRegion3D/Right Grave Group" unique_id=1136631717 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 24.0029)
+
+[node name="gravestone-bevel15" parent="NavigationRegion3D/Right Grave Group" unique_id=780138712 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 16.0029)
+
+[node name="gravestone-bevel18" parent="NavigationRegion3D/Right Grave Group" unique_id=633445546 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 12.0029)
+
+[node name="gravestone-bevel20" parent="NavigationRegion3D/Right Grave Group" unique_id=1917085400 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 8.00293)
+
+[node name="gravestone-bevel21" parent="NavigationRegion3D/Right Grave Group" unique_id=1924511693 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 8.00293)
+
+[node name="gravestone-bevel22" parent="NavigationRegion3D/Right Grave Group" unique_id=1071221966 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 16.0029)
+
+[node name="gravestone-bevel23" parent="NavigationRegion3D/Right Grave Group" unique_id=225184958 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 4.00293)
+
+[node name="gravestone-bevel9" parent="NavigationRegion3D/Right Grave Group" unique_id=1642446975 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.401248, 20.0029)
+
+[node name="gravestone-bevel10" parent="NavigationRegion3D/Right Grave Group" unique_id=1649537654 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.401248, 16.0029)
+
+[node name="gravestone-bevel11" parent="NavigationRegion3D/Right Grave Group" unique_id=949597265 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.401248, 8.00293)
+
+[node name="gravestone-broken6" parent="NavigationRegion3D/Right Grave Group" unique_id=2104227280 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.385886, 20.0029)
+
+[node name="gravestone-broken7" parent="NavigationRegion3D/Right Grave Group" unique_id=294404127 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.385886, 4.00293)
+
+[node name="gravestone-broken8" parent="NavigationRegion3D/Right Grave Group" unique_id=8543971 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.385886, 4.00293)
+
+[node name="gravestone-broken9" parent="NavigationRegion3D/Right Grave Group" unique_id=1759009679 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.385886, 24.0029)
+
+[node name="gravestone-cross6" parent="NavigationRegion3D/Right Grave Group" unique_id=165368686 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.381563, 12.0029)
+
+[node name="gravestone-cross7" parent="NavigationRegion3D/Right Grave Group" unique_id=1565328373 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.381563, 12.0029)
+
+[node name="Right Grave Group2" type="Node3D" parent="NavigationRegion3D" unique_id=414033729]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, 28)
+metadata/_edit_group_ = true
+
+[node name="grave20" parent="NavigationRegion3D/Right Grave Group2" unique_id=2053514379 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 12)
+
+[node name="grave21" parent="NavigationRegion3D/Right Grave Group2" unique_id=2067794548 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 8)
+
+[node name="grave22" parent="NavigationRegion3D/Right Grave Group2" unique_id=1774954704 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 4)
+
+[node name="grave23" parent="NavigationRegion3D/Right Grave Group2" unique_id=762143364 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 16)
+
+[node name="grave24" parent="NavigationRegion3D/Right Grave Group2" unique_id=931468842 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 20)
+
+[node name="grave25" parent="NavigationRegion3D/Right Grave Group2" unique_id=888243051 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21, 0.395476, 24)
+
+[node name="grave26" parent="NavigationRegion3D/Right Grave Group2" unique_id=1257198420 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 24)
+
+[node name="grave27" parent="NavigationRegion3D/Right Grave Group2" unique_id=886381377 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 20)
+
+[node name="grave28" parent="NavigationRegion3D/Right Grave Group2" unique_id=1219109075 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 16)
+
+[node name="grave29" parent="NavigationRegion3D/Right Grave Group2" unique_id=1082689748 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 12)
+
+[node name="grave30" parent="NavigationRegion3D/Right Grave Group2" unique_id=378572789 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 8)
+
+[node name="grave31" parent="NavigationRegion3D/Right Grave Group2" unique_id=2108857644 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26, 0.395476, 4)
+
+[node name="grave32" parent="NavigationRegion3D/Right Grave Group2" unique_id=943921249 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 4)
+
+[node name="grave34" parent="NavigationRegion3D/Right Grave Group2" unique_id=1298347666 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 12)
+
+[node name="grave35" parent="NavigationRegion3D/Right Grave Group2" unique_id=1967564932 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 16)
+
+[node name="grave36" parent="NavigationRegion3D/Right Grave Group2" unique_id=604968011 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 20)
+
+[node name="grave37" parent="NavigationRegion3D/Right Grave Group2" unique_id=1768275675 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 24)
+
+[node name="iron-fence2" parent="NavigationRegion3D/Right Grave Group2" unique_id=653401747 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.7048, 0.398468, 18.3361)
+
+[node name="iron-fence16" parent="NavigationRegion3D/Right Grave Group2" unique_id=1777187647 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-0.5, -0.866025, 5.97109e-08, -4.37114e-08, -4.37114e-08, -1, 0.866025, -0.5, -1.59995e-08, -39.3045, -0.815248, 8.3361)
+
+[node name="iron-fence20" parent="NavigationRegion3D/Right Grave Group2" unique_id=910041185 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-0.258819, -0.965926, 5.35353e-08, -4.37114e-08, -4.37114e-08, -1, 0.965926, -0.258819, -3.09086e-08, -42.3045, -0.815248, 12.3361)
+
+[node name="iron-fence21" parent="NavigationRegion3D/Right Grave Group2" unique_id=1409829008 instance=ExtResource("11_7yo87")]
+transform = Transform3D(0.258819, -0.965926, 3.09086e-08, -4.37114e-08, -4.37114e-08, -1, 0.965926, 0.258819, -5.35353e-08, -40.3045, -0.815248, 18.3361)
+
+[node name="iron-fence22" parent="NavigationRegion3D/Right Grave Group2" unique_id=1338378073 instance=ExtResource("11_7yo87")]
+transform = Transform3D(0.707107, -0.707107, 0, -4.37114e-08, -4.37114e-08, -1, 0.707107, 0.707107, -6.18172e-08, -38.3045, -0.815248, 22.3361)
+
+[node name="iron-fence10" parent="NavigationRegion3D/Right Grave Group2" unique_id=391005028 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7048, 0.398468, 1.33252)
+
+[node name="iron-fence7" parent="NavigationRegion3D/Right Grave Group2" unique_id=2013935901 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7048, 0.398468, 28.937)
+
+[node name="iron-fence4" parent="NavigationRegion3D/Right Grave Group2" unique_id=48121007 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.7048, 0.398468, 22.3361)
+
+[node name="iron-fence5" parent="NavigationRegion3D/Right Grave Group2" unique_id=489657182 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.7048, 0.398468, 5.3361)
+
+[node name="iron-fence-curve2" parent="NavigationRegion3D/Right Grave Group2" unique_id=631437736 instance=ExtResource("12_op4cu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -18.7055, 0.398468, 26.3408)
+
+[node name="iron-fence-curve5" parent="NavigationRegion3D/Right Grave Group2" unique_id=1120449841 instance=ExtResource("12_op4cu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -34.7055, 0.398468, 26.3408)
+
+[node name="iron-fence-curve3" parent="NavigationRegion3D/Right Grave Group2" unique_id=898767057 instance=ExtResource("12_op4cu")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -18.7055, 0.398468, 1.33943)
+
+[node name="iron-fence-curve4" parent="NavigationRegion3D/Right Grave Group2" unique_id=1926065911 instance=ExtResource("12_op4cu")]
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, -34.7055, 0.398468, 1.33943)
+
+[node name="iron-fence-damaged2" parent="NavigationRegion3D/Right Grave Group2" unique_id=317918935 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7029, 0.404415, 1.32982)
+
+[node name="iron-fence-damaged6" parent="NavigationRegion3D/Right Grave Group2" unique_id=207539708 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7029, 0.404415, 1.32982)
+
+[node name="iron-fence-damaged3" parent="NavigationRegion3D/Right Grave Group2" unique_id=2079952466 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.1087, 0.404417, 9.33426)
+
+[node name="iron-fence-damaged4" parent="NavigationRegion3D/Right Grave Group2" unique_id=995630403 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7109, 0.404415, 28.9374)
+
+[node name="iron-fence-damaged5" parent="NavigationRegion3D/Right Grave Group2" unique_id=583885044 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.7109, 0.404415, 28.9374)
+
+[node name="iron-fence-damaged7" parent="NavigationRegion3D/Right Grave Group2" unique_id=1994938210 instance=ExtResource("13_8l3nt")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -34.6961, 0.404416, 5.2745)
+
+[node name="gravestone-bevel4" parent="NavigationRegion3D/Right Grave Group2" unique_id=162994568 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 24.0029)
+
+[node name="gravestone-bevel7" parent="NavigationRegion3D/Right Grave Group2" unique_id=694014309 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 24.0029)
+
+[node name="gravestone-bevel15" parent="NavigationRegion3D/Right Grave Group2" unique_id=297074904 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 16.0029)
+
+[node name="gravestone-bevel18" parent="NavigationRegion3D/Right Grave Group2" unique_id=1622890417 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 12.0029)
+
+[node name="gravestone-bevel20" parent="NavigationRegion3D/Right Grave Group2" unique_id=9774796 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.401248, 8.00293)
+
+[node name="gravestone-bevel21" parent="NavigationRegion3D/Right Grave Group2" unique_id=2029025721 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 8.00293)
+
+[node name="gravestone-bevel22" parent="NavigationRegion3D/Right Grave Group2" unique_id=1453255388 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 16.0029)
+
+[node name="gravestone-bevel23" parent="NavigationRegion3D/Right Grave Group2" unique_id=1420989952 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.401248, 4.00293)
+
+[node name="gravestone-bevel9" parent="NavigationRegion3D/Right Grave Group2" unique_id=1177528131 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.401248, 20.0029)
+
+[node name="gravestone-bevel10" parent="NavigationRegion3D/Right Grave Group2" unique_id=899265529 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.401248, 16.0029)
+
+[node name="gravestone-bevel11" parent="NavigationRegion3D/Right Grave Group2" unique_id=127833667 instance=ExtResource("8_kn06e")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.401248, 8.00293)
+
+[node name="gravestone-broken6" parent="NavigationRegion3D/Right Grave Group2" unique_id=1226483106 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.385886, 20.0029)
+
+[node name="gravestone-broken7" parent="NavigationRegion3D/Right Grave Group2" unique_id=2108987817 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.6471, 0.385886, 4.00293)
+
+[node name="gravestone-broken8" parent="NavigationRegion3D/Right Grave Group2" unique_id=1635644291 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.385886, 4.00293)
+
+[node name="gravestone-broken9" parent="NavigationRegion3D/Right Grave Group2" unique_id=801524281 instance=ExtResource("9_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.385886, 24.0029)
+
+[node name="gravestone-cross6" parent="NavigationRegion3D/Right Grave Group2" unique_id=880078630 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.6471, 0.381563, 12.0029)
+
+[node name="gravestone-cross7" parent="NavigationRegion3D/Right Grave Group2" unique_id=832336840 instance=ExtResource("10_ti1bm")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -32.6471, 0.381563, 12.0029)
+
+[node name="Lighting Group" type="Node3D" parent="NavigationRegion3D" unique_id=959723304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="urn-round2" parent="NavigationRegion3D/Lighting Group" unique_id=553928086 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14665, 2.125, 6.47025)
+
+[node name="urn-round3" parent="NavigationRegion3D/Lighting Group" unique_id=973289561 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18944, 2.125, 6.53739)
+
+[node name="urn-round4" parent="NavigationRegion3D/Lighting Group" unique_id=314534813 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.14324, 2.125, 22.3888)
+
+[node name="urn-round5" parent="NavigationRegion3D/Lighting Group" unique_id=1989021641 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.31209, 2.125, 22.4068)
+
+[node name="urn-round6" parent="NavigationRegion3D/Lighting Group" unique_id=457045086 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.8481, 0.398468, 26.2886)
+
+[node name="urn-round7" parent="NavigationRegion3D/Lighting Group" unique_id=785356875 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.7731, 0.398468, 3.95629)
+
+[node name="urn-round8" parent="NavigationRegion3D/Lighting Group" unique_id=1250514561 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.59688, 0.398468, -18.3821)
+
+[node name="urn-round9" parent="NavigationRegion3D/Lighting Group" unique_id=582717687 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8855, 0.398468, -11.1276)
+
+[node name="urn-round10" parent="NavigationRegion3D/Lighting Group" unique_id=642628032 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6033, 0.398467, 0.31841)
+
+[node name="urn-round11" parent="NavigationRegion3D/Lighting Group" unique_id=293201302 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.3415, 0.398468, 26.8151)
+
+[node name="urn-round12" parent="NavigationRegion3D/Lighting Group" unique_id=1293034025 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(0.0329633, 0.999457, 0, -0.999457, 0.0329633, 0, 0, 0, 1, 39.2297, 0.517611, 13.6101)
+
+[node name="urn-round13" parent="NavigationRegion3D/Lighting Group" unique_id=1494630854 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4236, 0.398468, 16.7648)
+
+[node name="urn-round14" parent="NavigationRegion3D/Lighting Group" unique_id=2000950755 instance=ExtResource("14_8l3nt")]
+transform = Transform3D(0.622699, -0.71877, 0.309219, -0.44476, -4.37114e-08, 0.89565, -0.643766, -0.695248, -0.31968, 0.101525, 0.625908, -11.158)
+
+[node name="Tree" type="Node3D" parent="NavigationRegion3D" unique_id=1863394261]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="pine-crooked4" parent="NavigationRegion3D/Tree" unique_id=1553278458 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 39)
+
+[node name="pine-crooked3" parent="NavigationRegion3D/Tree" unique_id=110820272 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 50)
+
+[node name="pine-crooked2" parent="NavigationRegion3D/Tree" unique_id=134756044 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 44)
+
+[node name="pine-crooked5" parent="NavigationRegion3D/Tree" unique_id=1843946236 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 22)
+
+[node name="pine-crooked6" parent="NavigationRegion3D/Tree" unique_id=120908505 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 33)
+
+[node name="pine-crooked7" parent="NavigationRegion3D/Tree" unique_id=830355683 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 27)
+
+[node name="pine-crooked8" parent="NavigationRegion3D/Tree" unique_id=1736433856 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 5)
+
+[node name="pine-crooked9" parent="NavigationRegion3D/Tree" unique_id=2069778980 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 16)
+
+[node name="pine-crooked10" parent="NavigationRegion3D/Tree" unique_id=257414860 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, 10)
+
+[node name="pine-crooked11" parent="NavigationRegion3D/Tree" unique_id=487104686 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -12)
+
+[node name="pine-crooked12" parent="NavigationRegion3D/Tree" unique_id=94262236 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -1)
+
+[node name="pine-crooked13" parent="NavigationRegion3D/Tree" unique_id=2104808012 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -7)
+
+[node name="pine-crooked14" parent="NavigationRegion3D/Tree" unique_id=910851321 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -29)
+
+[node name="pine-crooked15" parent="NavigationRegion3D/Tree" unique_id=942176268 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -18)
+
+[node name="pine-crooked16" parent="NavigationRegion3D/Tree" unique_id=2031119856 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -24)
+
+[node name="pine-crooked17" parent="NavigationRegion3D/Tree" unique_id=1216667740 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -46)
+
+[node name="pine-crooked18" parent="NavigationRegion3D/Tree" unique_id=268527295 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -35)
+
+[node name="pine-crooked19" parent="NavigationRegion3D/Tree" unique_id=1383201320 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -41)
+
+[node name="pine-crooked20" parent="NavigationRegion3D/Tree" unique_id=1587447846 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -63)
+
+[node name="pine-crooked21" parent="NavigationRegion3D/Tree" unique_id=668419855 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -52)
+
+[node name="pine-crooked22" parent="NavigationRegion3D/Tree" unique_id=1899610447 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52, 1, -58)
+
+[node name="pine-crooked23" parent="NavigationRegion3D/Tree" unique_id=101169720 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 42)
+
+[node name="pine-crooked24" parent="NavigationRegion3D/Tree" unique_id=1494807885 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 53)
+
+[node name="pine-crooked25" parent="NavigationRegion3D/Tree" unique_id=1862150428 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 47)
+
+[node name="pine-crooked26" parent="NavigationRegion3D/Tree" unique_id=1578670297 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 25)
+
+[node name="pine-crooked27" parent="NavigationRegion3D/Tree" unique_id=1437979791 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 36)
+
+[node name="pine-crooked28" parent="NavigationRegion3D/Tree" unique_id=815034217 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 30)
+
+[node name="pine-crooked29" parent="NavigationRegion3D/Tree" unique_id=314664196 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 8)
+
+[node name="pine-crooked30" parent="NavigationRegion3D/Tree" unique_id=1029498268 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 19)
+
+[node name="pine-crooked31" parent="NavigationRegion3D/Tree" unique_id=1944893369 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 13)
+
+[node name="pine-crooked32" parent="NavigationRegion3D/Tree" unique_id=1429639521 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -9)
+
+[node name="pine-crooked33" parent="NavigationRegion3D/Tree" unique_id=902835469 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, 2)
+
+[node name="pine-crooked34" parent="NavigationRegion3D/Tree" unique_id=1183600869 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -4)
+
+[node name="pine-crooked35" parent="NavigationRegion3D/Tree" unique_id=1361025849 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -26)
+
+[node name="pine-crooked36" parent="NavigationRegion3D/Tree" unique_id=1050772399 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -15)
+
+[node name="pine-crooked37" parent="NavigationRegion3D/Tree" unique_id=1781759458 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -21)
+
+[node name="pine-crooked38" parent="NavigationRegion3D/Tree" unique_id=2004682186 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -43)
+
+[node name="pine-crooked39" parent="NavigationRegion3D/Tree" unique_id=1333498101 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -32)
+
+[node name="pine-crooked40" parent="NavigationRegion3D/Tree" unique_id=1059113021 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -38)
+
+[node name="pine-crooked41" parent="NavigationRegion3D/Tree" unique_id=2007611850 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -60)
+
+[node name="pine-crooked42" parent="NavigationRegion3D/Tree" unique_id=497755857 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -49)
+
+[node name="pine-crooked43" parent="NavigationRegion3D/Tree" unique_id=1384333506 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58, 1, -55)
+
+[node name="pine-crooked44" parent="NavigationRegion3D/Tree" unique_id=1980331013 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30.6667, 1, 51.3333)
+
+[node name="pine-crooked45" parent="NavigationRegion3D/Tree" unique_id=1668182480 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -41.6667, 1, 51.3333)
+
+[node name="pine-crooked138" parent="NavigationRegion3D/Tree" unique_id=1276231283 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -45.6667, 1, 51.3333)
+
+[node name="pine-crooked46" parent="NavigationRegion3D/Tree" unique_id=448981386 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -35.6667, 1, 51.3333)
+
+[node name="pine-crooked47" parent="NavigationRegion3D/Tree" unique_id=632439268 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.6667, 1, 51.3333)
+
+[node name="pine-crooked48" parent="NavigationRegion3D/Tree" unique_id=603687753 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.6667, 1, 51.3333)
+
+[node name="pine-crooked49" parent="NavigationRegion3D/Tree" unique_id=1338204827 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.6667, 1, 51.3333)
+
+[node name="pine-crooked50" parent="NavigationRegion3D/Tree" unique_id=1855407034 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.33333, 1, 51.3333)
+
+[node name="pine-crooked51" parent="NavigationRegion3D/Tree" unique_id=2088408295 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.66667, 1, 51.3333)
+
+[node name="pine-crooked52" parent="NavigationRegion3D/Tree" unique_id=359521009 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.66667, 1, 51.3333)
+
+[node name="pine-crooked53" parent="NavigationRegion3D/Tree" unique_id=1106242559 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.3333, 1, 51.3333)
+
+[node name="pine-crooked54" parent="NavigationRegion3D/Tree" unique_id=117755507 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.33333, 1, 51.3333)
+
+[node name="pine-crooked55" parent="NavigationRegion3D/Tree" unique_id=18774096 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.3333, 1, 51.3333)
+
+[node name="pine-crooked56" parent="NavigationRegion3D/Tree" unique_id=1545940069 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 37.3333, 1, 51.3333)
+
+[node name="pine-crooked57" parent="NavigationRegion3D/Tree" unique_id=2113699369 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26.3333, 1, 51.3333)
+
+[node name="pine-crooked58" parent="NavigationRegion3D/Tree" unique_id=269342653 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.3333, 1, 51.3333)
+
+[node name="pine-crooked59" parent="NavigationRegion3D/Tree" unique_id=2116514969 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 54.3333, 1, 51.3333)
+
+[node name="pine-crooked60" parent="NavigationRegion3D/Tree" unique_id=1860114453 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 43.3333, 1, 51.3333)
+
+[node name="pine-crooked61" parent="NavigationRegion3D/Tree" unique_id=776056557 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 49.3333, 1, 51.3333)
+
+[node name="pine-crooked62" parent="NavigationRegion3D/Tree" unique_id=1599764169 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 71.3333, 1, 51.3333)
+
+[node name="pine-crooked63" parent="NavigationRegion3D/Tree" unique_id=1603787370 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.3333, 1, 51.3333)
+
+[node name="pine-crooked64" parent="NavigationRegion3D/Tree" unique_id=1978322149 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 66.3333, 1, 51.3333)
+
+[node name="pine-crooked65" parent="NavigationRegion3D/Tree" unique_id=1092051428 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30.6667, 1, 51.3333)
+
+[node name="pine-crooked66" parent="NavigationRegion3D/Tree" unique_id=362525172 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -41.6667, 1, 51.3333)
+
+[node name="pine-crooked67" parent="NavigationRegion3D/Tree" unique_id=1688181434 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -35.6667, 1, 51.3333)
+
+[node name="pine-crooked68" parent="NavigationRegion3D/Tree" unique_id=1619574979 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.6667, 1, 51.3333)
+
+[node name="pine-crooked69" parent="NavigationRegion3D/Tree" unique_id=1976194286 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.6667, 1, 51.3333)
+
+[node name="pine-crooked70" parent="NavigationRegion3D/Tree" unique_id=1099333391 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.6667, 1, 51.3333)
+
+[node name="pine-crooked71" parent="NavigationRegion3D/Tree" unique_id=279704153 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.33333, 1, 51.3333)
+
+[node name="pine-crooked72" parent="NavigationRegion3D/Tree" unique_id=1645842544 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -7.66667, 1, 51.3333)
+
+[node name="pine-crooked73" parent="NavigationRegion3D/Tree" unique_id=67148514 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.66667, 1, 51.3333)
+
+[node name="pine-crooked74" parent="NavigationRegion3D/Tree" unique_id=18933871 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 20.3333, 1, 51.3333)
+
+[node name="pine-crooked75" parent="NavigationRegion3D/Tree" unique_id=1704477047 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.33333, 1, 51.3333)
+
+[node name="pine-crooked76" parent="NavigationRegion3D/Tree" unique_id=987264390 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 15.3333, 1, 51.3333)
+
+[node name="pine-crooked77" parent="NavigationRegion3D/Tree" unique_id=1299364349 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 37.3333, 1, 51.3333)
+
+[node name="pine-crooked78" parent="NavigationRegion3D/Tree" unique_id=264971853 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26.3333, 1, 51.3333)
+
+[node name="pine-crooked79" parent="NavigationRegion3D/Tree" unique_id=494184207 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 32.3333, 1, 51.3333)
+
+[node name="pine-crooked80" parent="NavigationRegion3D/Tree" unique_id=1880813092 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 54.3333, 1, 51.3333)
+
+[node name="pine-crooked81" parent="NavigationRegion3D/Tree" unique_id=126676142 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 43.3333, 1, 51.3333)
+
+[node name="pine-crooked82" parent="NavigationRegion3D/Tree" unique_id=451765619 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 49.3333, 1, 51.3333)
+
+[node name="pine-crooked83" parent="NavigationRegion3D/Tree" unique_id=108581573 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 71.3333, 1, 51.3333)
+
+[node name="pine-crooked84" parent="NavigationRegion3D/Tree" unique_id=137586832 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.3333, 1, 51.3333)
+
+[node name="pine-crooked85" parent="NavigationRegion3D/Tree" unique_id=1367934817 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 66.3333, 1, 51.3333)
+
+[node name="pine-crooked86" parent="NavigationRegion3D/Tree" unique_id=407686501 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.3333, 1, 56.3333)
+
+[node name="pine-crooked87" parent="NavigationRegion3D/Tree" unique_id=238091970 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 52.3333, 1, 56.3333)
+
+[node name="pine-crooked88" parent="NavigationRegion3D/Tree" unique_id=711001603 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 74.3333, 1, 56.3333)
+
+[node name="pine-crooked89" parent="NavigationRegion3D/Tree" unique_id=2077857339 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 63.3333, 1, 56.3333)
+
+[node name="pine-crooked90" parent="NavigationRegion3D/Tree" unique_id=1296915540 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 69.3333, 1, 56.3333)
+
+[node name="pine-crooked91" parent="NavigationRegion3D/Tree" unique_id=531338623 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.6667, 1, 56.3333)
+
+[node name="pine-crooked92" parent="NavigationRegion3D/Tree" unique_id=988454360 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -38.6667, 1, 56.3333)
+
+[node name="pine-crooked93" parent="NavigationRegion3D/Tree" unique_id=1296141032 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -32.6667, 1, 56.3333)
+
+[node name="pine-crooked94" parent="NavigationRegion3D/Tree" unique_id=1746617299 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.6667, 1, 56.3333)
+
+[node name="pine-crooked95" parent="NavigationRegion3D/Tree" unique_id=973034885 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21.6667, 1, 56.3333)
+
+[node name="pine-crooked96" parent="NavigationRegion3D/Tree" unique_id=1043161183 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15.6667, 1, 56.3333)
+
+[node name="pine-crooked97" parent="NavigationRegion3D/Tree" unique_id=1208128588 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.33333, 1, 56.3333)
+
+[node name="pine-crooked98" parent="NavigationRegion3D/Tree" unique_id=2068427816 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.66667, 1, 56.3333)
+
+[node name="pine-crooked99" parent="NavigationRegion3D/Tree" unique_id=1895463409 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.33333, 1, 56.3333)
+
+[node name="pine-crooked100" parent="NavigationRegion3D/Tree" unique_id=1408890297 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 23.3333, 1, 56.3333)
+
+[node name="pine-crooked101" parent="NavigationRegion3D/Tree" unique_id=302220498 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12.3333, 1, 56.3333)
+
+[node name="pine-crooked102" parent="NavigationRegion3D/Tree" unique_id=139539533 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.3333, 1, 56.3333)
+
+[node name="pine-crooked103" parent="NavigationRegion3D/Tree" unique_id=1368975437 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 40.3333, 1, 56.3333)
+
+[node name="pine-crooked104" parent="NavigationRegion3D/Tree" unique_id=298479311 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29.3333, 1, 56.3333)
+
+[node name="pine-crooked105" parent="NavigationRegion3D/Tree" unique_id=491442080 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 35.3333, 1, 56.3333)
+
+[node name="pine-crooked106" parent="NavigationRegion3D/Tree" unique_id=1216514812 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 57.3333, 1, 56.3333)
+
+[node name="pine-crooked107" parent="NavigationRegion3D/Tree" unique_id=1274641552 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.3333, 1, 56.3333)
+
+[node name="pine-crooked108" parent="NavigationRegion3D/Tree" unique_id=1335231867 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 52.3333, 1, 56.3333)
+
+[node name="pine-crooked109" parent="NavigationRegion3D/Tree" unique_id=1344307277 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 74.3333, 1, 56.3333)
+
+[node name="pine-crooked110" parent="NavigationRegion3D/Tree" unique_id=1376736183 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 63.3333, 1, 56.3333)
+
+[node name="pine-crooked111" parent="NavigationRegion3D/Tree" unique_id=1306144609 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 69.3333, 1, 56.3333)
+
+[node name="pine-crooked112" parent="NavigationRegion3D/Tree" unique_id=696304159 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -33.7051)
+
+[node name="pine-crooked113" parent="NavigationRegion3D/Tree" unique_id=941859092 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -39.7051)
+
+[node name="pine-crooked114" parent="NavigationRegion3D/Tree" unique_id=269109199 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -61.7051)
+
+[node name="pine-crooked115" parent="NavigationRegion3D/Tree" unique_id=1444956148 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -50.7051)
+
+[node name="pine-crooked116" parent="NavigationRegion3D/Tree" unique_id=1368401705 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -56.7051)
+
+[node name="pine-crooked117" parent="NavigationRegion3D/Tree" unique_id=666409684 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 40.2949)
+
+[node name="pine-crooked118" parent="NavigationRegion3D/Tree" unique_id=228482534 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 51.2949)
+
+[node name="pine-crooked119" parent="NavigationRegion3D/Tree" unique_id=1261698942 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 45.2949)
+
+[node name="pine-crooked120" parent="NavigationRegion3D/Tree" unique_id=308252379 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 23.2949)
+
+[node name="pine-crooked121" parent="NavigationRegion3D/Tree" unique_id=1441373694 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 34.2949)
+
+[node name="pine-crooked122" parent="NavigationRegion3D/Tree" unique_id=1904705596 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 28.2949)
+
+[node name="pine-crooked123" parent="NavigationRegion3D/Tree" unique_id=906431794 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 6.29488)
+
+[node name="pine-crooked124" parent="NavigationRegion3D/Tree" unique_id=1639014138 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 17.2949)
+
+[node name="pine-crooked125" parent="NavigationRegion3D/Tree" unique_id=116133847 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 11.2949)
+
+[node name="pine-crooked126" parent="NavigationRegion3D/Tree" unique_id=1787576565 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -10.7051)
+
+[node name="pine-crooked127" parent="NavigationRegion3D/Tree" unique_id=538595102 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, 0.294876)
+
+[node name="pine-crooked128" parent="NavigationRegion3D/Tree" unique_id=1872014744 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -5.70512)
+
+[node name="pine-crooked129" parent="NavigationRegion3D/Tree" unique_id=1619581925 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -27.7051)
+
+[node name="pine-crooked130" parent="NavigationRegion3D/Tree" unique_id=723108064 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -16.7051)
+
+[node name="pine-crooked131" parent="NavigationRegion3D/Tree" unique_id=979960904 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -22.7051)
+
+[node name="pine-crooked132" parent="NavigationRegion3D/Tree" unique_id=1310302838 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -44.7051)
+
+[node name="pine-crooked133" parent="NavigationRegion3D/Tree" unique_id=1321936759 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -33.7051)
+
+[node name="pine-crooked134" parent="NavigationRegion3D/Tree" unique_id=832112530 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -39.7051)
+
+[node name="pine-crooked135" parent="NavigationRegion3D/Tree" unique_id=390417030 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -61.7051)
+
+[node name="pine-crooked136" parent="NavigationRegion3D/Tree" unique_id=1344316231 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -50.7051)
+
+[node name="pine-crooked137" parent="NavigationRegion3D/Tree" unique_id=1198570596 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.7051, 1, -56.7051)
+
+[node name="pine-crooked139" parent="NavigationRegion3D/Tree" unique_id=1217486165 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -47.7051)
+
+[node name="pine-crooked140" parent="NavigationRegion3D/Tree" unique_id=1480380782 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -53.7051)
+
+[node name="pine-crooked141" parent="NavigationRegion3D/Tree" unique_id=1393274239 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 43.2949)
+
+[node name="pine-crooked142" parent="NavigationRegion3D/Tree" unique_id=697013306 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 54.2949)
+
+[node name="pine-crooked143" parent="NavigationRegion3D/Tree" unique_id=1842560410 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 48.2949)
+
+[node name="pine-crooked144" parent="NavigationRegion3D/Tree" unique_id=829730886 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 26.2949)
+
+[node name="pine-crooked145" parent="NavigationRegion3D/Tree" unique_id=810770222 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 37.2949)
+
+[node name="pine-crooked146" parent="NavigationRegion3D/Tree" unique_id=1325646976 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 31.2949)
+
+[node name="pine-crooked147" parent="NavigationRegion3D/Tree" unique_id=825701274 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 9.29488)
+
+[node name="pine-crooked148" parent="NavigationRegion3D/Tree" unique_id=711612686 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 20.2949)
+
+[node name="pine-crooked149" parent="NavigationRegion3D/Tree" unique_id=18848127 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 14.2949)
+
+[node name="pine-crooked150" parent="NavigationRegion3D/Tree" unique_id=159552511 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -7.70512)
+
+[node name="pine-crooked151" parent="NavigationRegion3D/Tree" unique_id=2093568492 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, 3.29488)
+
+[node name="pine-crooked152" parent="NavigationRegion3D/Tree" unique_id=1892305601 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -2.70512)
+
+[node name="pine-crooked153" parent="NavigationRegion3D/Tree" unique_id=588206611 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -24.7051)
+
+[node name="pine-crooked154" parent="NavigationRegion3D/Tree" unique_id=1617603187 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -13.7051)
+
+[node name="pine-crooked155" parent="NavigationRegion3D/Tree" unique_id=574702071 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -19.7051)
+
+[node name="pine-crooked156" parent="NavigationRegion3D/Tree" unique_id=974512936 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -41.7051)
+
+[node name="pine-crooked157" parent="NavigationRegion3D/Tree" unique_id=230325283 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -30.7051)
+
+[node name="pine-crooked158" parent="NavigationRegion3D/Tree" unique_id=1423036111 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -36.7051)
+
+[node name="pine-crooked159" parent="NavigationRegion3D/Tree" unique_id=849988091 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -58.7051)
+
+[node name="pine-crooked160" parent="NavigationRegion3D/Tree" unique_id=525920268 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -47.7051)
+
+[node name="pine-crooked161" parent="NavigationRegion3D/Tree" unique_id=783184083 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -55.7051, 1, -53.7051)
+
+[node name="pine-crooked162" parent="NavigationRegion3D/Tree" unique_id=1784797690 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -54.8356, 1, -51.5747)
+
+[node name="pine-crooked163" parent="NavigationRegion3D/Tree" unique_id=27325859 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -60.8356, 1, -51.5747)
+
+[node name="pine-crooked164" parent="NavigationRegion3D/Tree" unique_id=1807285625 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 36.1644, 1, -51.5747)
+
+[node name="pine-crooked165" parent="NavigationRegion3D/Tree" unique_id=1836031103 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 47.1644, 1, -51.5747)
+
+[node name="pine-crooked166" parent="NavigationRegion3D/Tree" unique_id=1403448841 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 41.1644, 1, -51.5747)
+
+[node name="pine-crooked167" parent="NavigationRegion3D/Tree" unique_id=892113144 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 19.1644, 1, -51.5747)
+
+[node name="pine-crooked168" parent="NavigationRegion3D/Tree" unique_id=1088433459 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 30.1644, 1, -51.5747)
+
+[node name="pine-crooked169" parent="NavigationRegion3D/Tree" unique_id=1215614920 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 24.1644, 1, -51.5747)
+
+[node name="pine-crooked170" parent="NavigationRegion3D/Tree" unique_id=1767283047 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.16442, 1, -51.5747)
+
+[node name="pine-crooked171" parent="NavigationRegion3D/Tree" unique_id=983651848 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 13.1644, 1, -51.5747)
+
+[node name="pine-crooked172" parent="NavigationRegion3D/Tree" unique_id=604286385 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.16442, 1, -51.5747)
+
+[node name="pine-crooked173" parent="NavigationRegion3D/Tree" unique_id=401266998 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -14.8356, 1, -51.5747)
+
+[node name="pine-crooked174" parent="NavigationRegion3D/Tree" unique_id=1787364473 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.83558, 1, -51.5747)
+
+[node name="pine-crooked175" parent="NavigationRegion3D/Tree" unique_id=1833527061 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9.83558, 1, -51.5747)
+
+[node name="pine-crooked176" parent="NavigationRegion3D/Tree" unique_id=1752600173 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31.8356, 1, -51.5747)
+
+[node name="pine-crooked177" parent="NavigationRegion3D/Tree" unique_id=1595983081 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.8356, 1, -51.5747)
+
+[node name="pine-crooked178" parent="NavigationRegion3D/Tree" unique_id=1843171863 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -26.8356, 1, -51.5747)
+
+[node name="pine-crooked179" parent="NavigationRegion3D/Tree" unique_id=1050060435 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.8356, 1, -51.5747)
+
+[node name="pine-crooked180" parent="NavigationRegion3D/Tree" unique_id=1501854946 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.8356, 1, -51.5747)
+
+[node name="pine-crooked181" parent="NavigationRegion3D/Tree" unique_id=58731639 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -43.8356, 1, -51.5747)
+
+[node name="pine-crooked182" parent="NavigationRegion3D/Tree" unique_id=1716407493 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -65.8356, 1, -51.5747)
+
+[node name="pine-crooked183" parent="NavigationRegion3D/Tree" unique_id=1590599102 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -54.8356, 1, -51.5747)
+
+[node name="pine-crooked184" parent="NavigationRegion3D/Tree" unique_id=403730089 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -60.8356, 1, -51.5747)
+
+[node name="pine-crooked185" parent="NavigationRegion3D/Tree" unique_id=463243251 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50.8356, 1, -56.5747)
+
+[node name="pine-crooked186" parent="NavigationRegion3D/Tree" unique_id=388872926 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -56.8356, 1, -56.5747)
+
+[node name="pine-crooked187" parent="NavigationRegion3D/Tree" unique_id=753328565 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 40.1644, 1, -56.5747)
+
+[node name="pine-crooked188" parent="NavigationRegion3D/Tree" unique_id=465244693 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 51.1644, 1, -56.5747)
+
+[node name="pine-crooked189" parent="NavigationRegion3D/Tree" unique_id=1336243390 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 45.1644, 1, -56.5747)
+
+[node name="pine-crooked190" parent="NavigationRegion3D/Tree" unique_id=2117588845 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.1644, 1, -56.5747)
+
+[node name="pine-crooked191" parent="NavigationRegion3D/Tree" unique_id=1661146991 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 34.1644, 1, -56.5747)
+
+[node name="pine-crooked192" parent="NavigationRegion3D/Tree" unique_id=2055045844 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.1644, 1, -56.5747)
+
+[node name="pine-crooked193" parent="NavigationRegion3D/Tree" unique_id=1361930934 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.16442, 1, -56.5747)
+
+[node name="pine-crooked194" parent="NavigationRegion3D/Tree" unique_id=1135275208 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17.1644, 1, -56.5747)
+
+[node name="pine-crooked195" parent="NavigationRegion3D/Tree" unique_id=192238089 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.1644, 1, -56.5747)
+
+[node name="pine-crooked196" parent="NavigationRegion3D/Tree" unique_id=154209924 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.8356, 1, -56.5747)
+
+[node name="pine-crooked197" parent="NavigationRegion3D/Tree" unique_id=1292808571 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.164425, 1, -56.5747)
+
+[node name="pine-crooked198" parent="NavigationRegion3D/Tree" unique_id=227051085 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.83558, 1, -56.5747)
+
+[node name="pine-crooked199" parent="NavigationRegion3D/Tree" unique_id=1358034087 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.8356, 1, -56.5747)
+
+[node name="pine-crooked200" parent="NavigationRegion3D/Tree" unique_id=1370612694 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16.8356, 1, -56.5747)
+
+[node name="pine-crooked201" parent="NavigationRegion3D/Tree" unique_id=1396098845 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -22.8356, 1, -56.5747)
+
+[node name="pine-crooked202" parent="NavigationRegion3D/Tree" unique_id=1994520314 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -44.8356, 1, -56.5747)
+
+[node name="pine-crooked203" parent="NavigationRegion3D/Tree" unique_id=822030564 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -33.8356, 1, -56.5747)
+
+[node name="pine-crooked204" parent="NavigationRegion3D/Tree" unique_id=1281597395 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -39.8356, 1, -56.5747)
+
+[node name="pine-crooked205" parent="NavigationRegion3D/Tree" unique_id=1937143080 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -61.8356, 1, -56.5747)
+
+[node name="pine-crooked206" parent="NavigationRegion3D/Tree" unique_id=1788820511 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50.8356, 1, -56.5747)
+
+[node name="pine-crooked207" parent="NavigationRegion3D/Tree" unique_id=906424130 instance=ExtResource("15_kwl8l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -56.8356, 1, -56.5747)
+
+[node name="AnythingButMoreContent" type="Node3D" parent="NavigationRegion3D" unique_id=2096072787]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.611928, 0)
+
+[node name="iron-fence-curve2" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1869385019 instance=ExtResource("12_op4cu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.8375, 0.398468, -46.7704)
+
+[node name="iron-fence2" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1787194184 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8415, 0.398468, -46.7697)
+
+[node name="iron-fence3" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=520889879 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.8415, 0.398468, -46.7697)
+
+[node name="iron-fence4" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=617048172 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.8415, 0.398468, -46.7697)
+
+[node name="iron-fence5" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1746192797 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.8415, 0.398468, -46.7697)
+
+[node name="iron-fence6" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=762545659 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8415, 0.398468, -46.7697)
+
+[node name="iron-fence7" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1292204934 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.8415, 0.398468, -46.7697)
+
+[node name="iron-fence8" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=235474501 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8415, 0.398468, -46.7697)
+
+[node name="iron-fence9" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1753741113 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8415, 0.398468, -46.7697)
+
+[node name="iron-fence10" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1875921281 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8415, 0.398468, -46.7697)
+
+[node name="iron-fence11" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=239940411 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.84152, 0.398468, -46.7697)
+
+[node name="iron-fence12" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1935912507 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.84152, 0.398468, -46.7697)
+
+[node name="iron-fence13" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1685888143 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15848, 0.398468, -46.7697)
+
+[node name="iron-fence14" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=26058659 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.15848, 0.398468, -46.7697)
+
+[node name="iron-fence15" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2107783416 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.15848, 0.398468, -46.7697)
+
+[node name="iron-fence16" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1097998384 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.1585, 0.398468, -46.7697)
+
+[node name="iron-fence17" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1227904458 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1585, 0.398468, -46.7697)
+
+[node name="iron-fence18" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1254137823 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1585, 0.398468, -46.7697)
+
+[node name="iron-fence19" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1919684902 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1585, 0.398468, -46.7697)
+
+[node name="iron-fence20" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=140635263 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.1585, 0.398468, -46.7697)
+
+[node name="iron-fence21" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1957158677 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.1585, 0.398468, -46.7697)
+
+[node name="iron-fence22" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1008370025 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.1585, 0.398468, -46.7697)
+
+[node name="iron-fence23" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1652859680 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1585, 0.398468, -46.7697)
+
+[node name="iron-fence24" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1079418293 instance=ExtResource("11_7yo87")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.1585, 0.398468, -46.7697)
+
+[node name="iron-fence48" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2067796160 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -42.1585, 0.398468, 46.1795)
+
+[node name="iron-fence49" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=487431866 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -38.1585, 0.398468, 46.1795)
+
+[node name="iron-fence50" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=864845353 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -34.1585, 0.398468, 46.1795)
+
+[node name="iron-fence51" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1709277895 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -30.1585, 0.398468, 46.1795)
+
+[node name="iron-fence52" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=428379709 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -26.1585, 0.398468, 46.1795)
+
+[node name="iron-fence53" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1549209074 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -22.1585, 0.398468, 46.1795)
+
+[node name="iron-fence54" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=746833183 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -18.1585, 0.398468, 46.1795)
+
+[node name="iron-fence55" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1818366718 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -14.1585, 0.398468, 46.1795)
+
+[node name="iron-fence56" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=593631048 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -10.1585, 0.398468, 46.1795)
+
+[node name="iron-fence57" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=552237486 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.15848, 0.398468, 46.1795)
+
+[node name="iron-fence58" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1761046508 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.15848, 0.398468, 46.1795)
+
+[node name="iron-fence59" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=683790826 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 1.84152, 0.398468, 46.1795)
+
+[node name="iron-fence60" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1415642770 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 5.84152, 0.398468, 46.1795)
+
+[node name="iron-fence61" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1757606357 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.84152, 0.398468, 46.1795)
+
+[node name="iron-fence62" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1608489495 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 13.8415, 0.398468, 46.1795)
+
+[node name="iron-fence63" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1711136071 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 17.8415, 0.398468, 46.1795)
+
+[node name="iron-fence64" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=589992058 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 21.8415, 0.398468, 46.1795)
+
+[node name="iron-fence65" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1728628224 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 25.8415, 0.398468, 46.1795)
+
+[node name="iron-fence66" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1189351595 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 29.8415, 0.398468, 46.1795)
+
+[node name="iron-fence67" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=325633853 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 33.8415, 0.398468, 46.1795)
+
+[node name="iron-fence68" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=37549269 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 37.8415, 0.398468, 46.1795)
+
+[node name="iron-fence69" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=687149040 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 41.8415, 0.398468, 46.1795)
+
+[node name="iron-fence70" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1739876529 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 42.8415, 0.398468, 46.1795)
+
+[node name="iron-fence-curve3" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2063387274 instance=ExtResource("12_op4cu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1018, 0.398468, -46.777)
+
+[node name="iron-fence-curve4" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=553508255 instance=ExtResource("12_op4cu")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.1018, 0.398468, 46.1697)
+
+[node name="iron-fence-curve5" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1286125391 instance=ExtResource("12_op4cu")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 46.8982, 0.398468, 46.1697)
+
+[node name="iron-fence25" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2125350047 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -42.7788)
+
+[node name="iron-fence26" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=304956423 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -38.7788)
+
+[node name="iron-fence27" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=584357345 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -34.7788)
+
+[node name="iron-fence28" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1271158178 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -30.7788)
+
+[node name="iron-fence29" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=166221244 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -26.7788)
+
+[node name="iron-fence30" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1006598980 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -22.7788)
+
+[node name="iron-fence31" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1513421155 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -18.7788)
+
+[node name="iron-fence32" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=269981441 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -14.7788)
+
+[node name="iron-fence33" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=668308013 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -10.7788)
+
+[node name="iron-fence34" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2014713893 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -6.77884)
+
+[node name="iron-fence35" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1027811231 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, -2.77884)
+
+[node name="iron-fence36" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=155990500 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 1.22116)
+
+[node name="iron-fence37" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1850930564 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 5.22116)
+
+[node name="iron-fence38" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=921175059 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 9.22116)
+
+[node name="iron-fence39" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1219425090 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 13.2212)
+
+[node name="iron-fence40" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2050159363 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 17.2212)
+
+[node name="iron-fence41" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2089733173 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 21.2212)
+
+[node name="iron-fence42" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1940506474 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 25.2212)
+
+[node name="iron-fence43" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2054142506 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 29.2212)
+
+[node name="iron-fence44" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1540946743 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 33.2212)
+
+[node name="iron-fence45" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1174043137 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 37.2212)
+
+[node name="iron-fence71" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=982648560 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 42.2212)
+
+[node name="iron-fence72" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1214618848 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 38.2212)
+
+[node name="iron-fence73" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=267354037 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 34.2212)
+
+[node name="iron-fence74" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2118001195 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 30.2212)
+
+[node name="iron-fence75" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1284948248 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 26.2212)
+
+[node name="iron-fence76" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=933074529 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 22.2212)
+
+[node name="iron-fence77" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=312487368 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 18.2212)
+
+[node name="iron-fence78" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=206826142 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 14.2212)
+
+[node name="iron-fence79" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1677620572 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 10.2212)
+
+[node name="iron-fence80" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1718973255 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 6.22116)
+
+[node name="iron-fence81" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=18049515 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, 2.22116)
+
+[node name="iron-fence82" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=2122351600 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -1.77884)
+
+[node name="iron-fence83" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=991182388 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -5.77884)
+
+[node name="iron-fence84" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=341901209 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -9.77884)
+
+[node name="iron-fence85" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1873524234 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -13.7788)
+
+[node name="iron-fence86" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=294958551 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -17.7788)
+
+[node name="iron-fence87" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=335229066 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -21.7788)
+
+[node name="iron-fence88" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1606791498 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -25.7788)
+
+[node name="iron-fence89" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1240026895 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -29.7788)
+
+[node name="iron-fence90" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1311201491 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -33.7788)
+
+[node name="iron-fence91" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=236375158 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -37.7788)
+
+[node name="iron-fence92" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=464838091 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -41.7788)
+
+[node name="iron-fence93" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1747674097 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 46.899, 0.398, -42.7788)
+
+[node name="iron-fence46" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1556168335 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 41.2212)
+
+[node name="iron-fence47" parent="NavigationRegion3D/AnythingButMoreContent" unique_id=1915018205 instance=ExtResource("11_7yo87")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -46.101, 0.398, 42.2212)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=264312834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376705, 2, -0.305685)
+use_collision = true
+size = Vector3(128, 0.02, 128)
+material = SubResource("StandardMaterial3D_5cjrv")
+
+[node name="Grave Container" type="Node3D" parent="NavigationRegion3D" unique_id=1403900841]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6179028, 0)
+
+[node name="grave2" parent="NavigationRegion3D/Grave Container" unique_id=1345386126 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.395476, -8)
+
+[node name="grave6" parent="NavigationRegion3D/Grave Container" unique_id=1119631299 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.395476, -8)
+
+[node name="grave7" parent="NavigationRegion3D/Grave Container" unique_id=868880712 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.395476, -8)
+
+[node name="grave3" parent="NavigationRegion3D/Grave Container" unique_id=1713931257 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.395476, -8)
+
+[node name="grave4" parent="NavigationRegion3D/Grave Container" unique_id=540709964 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.395476, -8)
+
+[node name="grave5" parent="NavigationRegion3D/Grave Container" unique_id=128161721 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.395476, -8)
+
+[node name="grave8" parent="NavigationRegion3D/Grave Container" unique_id=324882758 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.395476, -13)
+
+[node name="grave9" parent="NavigationRegion3D/Grave Container" unique_id=513651651 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.395476, -13)
+
+[node name="grave10" parent="NavigationRegion3D/Grave Container" unique_id=302605945 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.395476, -13)
+
+[node name="grave11" parent="NavigationRegion3D/Grave Container" unique_id=1757587690 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.395476, -13)
+
+[node name="grave12" parent="NavigationRegion3D/Grave Container" unique_id=1650855985 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.395476, -13)
+
+[node name="grave13" parent="NavigationRegion3D/Grave Container" unique_id=603134754 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.395476, -13)
+
+[node name="grave14" parent="NavigationRegion3D/Grave Container" unique_id=1260903751 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.395476, -18)
+
+[node name="grave15" parent="NavigationRegion3D/Grave Container" unique_id=163524902 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0.395476, -18)
+
+[node name="grave16" parent="NavigationRegion3D/Grave Container" unique_id=49130361 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.395476, -18)
+
+[node name="grave17" parent="NavigationRegion3D/Grave Container" unique_id=994620410 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.395476, -18)
+
+[node name="grave18" parent="NavigationRegion3D/Grave Container" unique_id=740424014 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.395476, -18)
+
+[node name="grave19" parent="NavigationRegion3D/Grave Container" unique_id=465650437 instance=ExtResource("7_y7y61")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.395476, -18)
+
+[node name="grave33" parent="NavigationRegion3D/Grave Container" unique_id=629126370 instance=ExtResource("7_y7y61")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -31, 0.395476, 8)
+
+[node name="crypt2" parent="NavigationRegion3D" unique_id=1929650052 instance=ExtResource("3_5nsto")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -0.0958829, 2, 9)
+
+[node name="Hopes and dreams" parent="." unique_id=1900031219 instance=ExtResource("16_xiqgv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.61115, 2.381964, -4.2631106)
+player_path = NodePath("../player")
+
+[node name="Hopes and dreams2" parent="." unique_id=944815529 instance=ExtResource("16_xiqgv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.019636, 2.1402934, -7.097495)
+player_path = NodePath("../player")
+
+[node name="Hopes and dreams3" parent="." unique_id=1822781226 instance=ExtResource("16_xiqgv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6455765, 2.1402934, -0.27085018)
+player_path = NodePath("../player")
+
+[node name="Hopes and dreams4" parent="." unique_id=1400356277 instance=ExtResource("16_xiqgv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.210261, 2.1402934, -8.083914)
+player_path = NodePath("../player")

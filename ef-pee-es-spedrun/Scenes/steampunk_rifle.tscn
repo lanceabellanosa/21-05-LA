@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cvbbq8bopqp8o"]
+
+[ext_resource type="PackedScene" uid="uid://byhoychabgleg" path="res://Models/Freedom/Steampunk Rifle.glb" id="1_m4kyi"]
+[ext_resource type="Material" uid="uid://ctdlmuaq7giu6" path="res://Colors/new_standard_material_3d.tres" id="2_evr2e"]
+[ext_resource type="Material" uid="uid://c1rsyur5ry25l" path="res://Colors/wood gun handle.tres" id="3_sod24"]
+
+[sub_resource type="Animation" id="Animation_sod24"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3km37"]
+resource_name = "Shoot"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.009999998, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.05), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2lnce"]
+_data = {
+&"RESET": SubResource("Animation_sod24"),
+&"Shoot": SubResource("Animation_3km37")
+}
+
+[node name="Steampunk Rifle" unique_id=590431372 instance=ExtResource("1_m4kyi")]
+
+[node name="Node" parent="." index="0" unique_id=1971906050]
+cast_shadow = 0
+surface_material_override/0 = ExtResource("2_evr2e")
+surface_material_override/1 = ExtResource("3_sod24")
+surface_material_override/2 = ExtResource("2_evr2e")
+surface_material_override/3 = ExtResource("2_evr2e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1" unique_id=825859359]
+libraries/ = SubResource("AnimationLibrary_2lnce")
+
+[node name="RayCast3D" type="RayCast3D" parent="." index="2" unique_id=1146905335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.4783945)
+target_position = Vector3(0, 0, -1)
