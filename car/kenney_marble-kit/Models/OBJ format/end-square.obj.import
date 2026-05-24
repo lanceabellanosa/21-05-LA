@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c3rlnd8pblke6"
+path="res://.godot/imported/end-square.obj-3c1099c848fc3ffe087ddd870c8dc327.mesh"
+
+[deps]
+
+files=["res://.godot/imported/end-square.obj-3c1099c848fc3ffe087ddd870c8dc327.mesh"]
+
+source_file="res://kenney_marble-kit/Models/OBJ format/end-square.obj"
+dest_files=["res://.godot/imported/end-square.obj-3c1099c848fc3ffe087ddd870c8dc327.mesh", "res://.godot/imported/end-square.obj-3c1099c848fc3ffe087ddd870c8dc327.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

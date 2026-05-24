@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c30cypstmuoxr"]
+
+[ext_resource type="Script" uid="uid://c4jwcbwbobuci" path="res://Scripts/title_screen.gd" id="1_d47p0"]
+[ext_resource type="Texture2D" uid="uid://cuuo3y2vgg0l4" path="res://kenney_marble-kit/Crude-Oil-Prices-Surge-After-Trumps-Warning-HPCL-BPCL-IOC-Share-Price-Unfazed.jpg" id="2_onenr"]
+
+[node name="Node3D" type="Control" unique_id=86208114]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d47p0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1136719605]
+auto_translate_mode = 2
+layout_mode = 0
+offset_right = 1156.0
+offset_bottom = 644.0
+texture = ExtResource("2_onenr")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1546644348]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 36.0
+offset_right = 1141.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 27
+text = "I believe in Parkinson's Law 
+so I did 90% of this project this morning with a bit of caffeine and my hopes and dream"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=517013133]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 250.0
+offset_right = 1153.0
+offset_bottom = 462.0
+theme_override_font_sizes/font_size = 14
+text = "Did you know that quarter 1 of this year has had the most blatant insider trading?"
+
+[node name="TimeLabel" type="Label" parent="." unique_id=1951070029]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 465.0
+offset_right = 751.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

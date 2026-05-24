@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2tj6kutuu4p"
+path="res://.godot/imported/support-single-top.obj-8c7398132155c04259f50b4ab4054695.mesh"
+
+[deps]
+
+files=["res://.godot/imported/support-single-top.obj-8c7398132155c04259f50b4ab4054695.mesh"]
+
+source_file="res://kenney_marble-kit/Models/OBJ format/support-single-top.obj"
+dest_files=["res://.godot/imported/support-single-top.obj-8c7398132155c04259f50b4ab4054695.mesh", "res://.godot/imported/support-single-top.obj-8c7398132155c04259f50b4ab4054695.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

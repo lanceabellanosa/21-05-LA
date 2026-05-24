@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wmnicc8o6a3"
+path="res://.godot/imported/split-large-solid-right.obj-c8092eda078f6b029cef47b75f29ebfa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/split-large-solid-right.obj-c8092eda078f6b029cef47b75f29ebfa.mesh"]
+
+source_file="res://kenney_marble-kit/Models/OBJ format/split-large-solid-right.obj"
+dest_files=["res://.godot/imported/split-large-solid-right.obj-c8092eda078f6b029cef47b75f29ebfa.mesh", "res://.godot/imported/split-large-solid-right.obj-c8092eda078f6b029cef47b75f29ebfa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

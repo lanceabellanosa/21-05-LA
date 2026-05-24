@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://5cig7ds5l27w"]
+
+[ext_resource type="Texture2D" uid="uid://116iscn01g2s" path="res://kenney_marble-kit/Job Application.jpeg" id="1_5mbqq"]
+[ext_resource type="Script" uid="uid://w74663kdug47" path="res://Scripts/end_pad.gd" id="1_map4n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_map4n"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dunoe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0fdyv"]
+albedo_texture = ExtResource("1_5mbqq")
+
+[node name="Node3D" type="Area3D" unique_id=243406221]
+transform = Transform3D(89.505, 0, 0, 0, 1, 0, 0, 0, 58.941, 0, 0, 0)
+script = ExtResource("1_map4n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1911926013]
+transform = Transform3D(1.9999998, 0, 0, 0, 1, 0, 0, 0, 4.1999984, 0, 0, 0)
+shape = SubResource("BoxShape3D_map4n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=534920893]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 1.9999999, 0, 0, 0)
+mesh = SubResource("PlaneMesh_dunoe")
+surface_material_override/0 = SubResource("StandardMaterial3D_0fdyv")

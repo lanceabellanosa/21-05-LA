@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://di0dd8hs4xxf8"
+path="res://.godot/imported/funnel-long.obj-244f5e4acff0844a719284d4d3935867.mesh"
+
+[deps]
+
+files=["res://.godot/imported/funnel-long.obj-244f5e4acff0844a719284d4d3935867.mesh"]
+
+source_file="res://kenney_marble-kit/Models/OBJ format/funnel-long.obj"
+dest_files=["res://.godot/imported/funnel-long.obj-244f5e4acff0844a719284d4d3935867.mesh", "res://.godot/imported/funnel-long.obj-244f5e4acff0844a719284d4d3935867.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

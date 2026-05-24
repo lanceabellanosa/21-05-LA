@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bxuf74ymfs4yl"]
+
+[ext_resource type="Script" uid="uid://dat4rl3vxvvq1" path="res://Scripts/player_ball.gd" id="1_rfcgh"]
+[ext_resource type="Texture2D" uid="uid://crtlw2o7t04ho" path="res://kenney_marble-kit/Xi Jinping.jpg" id="2_m38xh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_r0dna"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_b5aes"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k40wh"]
+albedo_texture = ExtResource("2_m38xh")
+
+[node name="PlayerBall" type="RigidBody3D" unique_id=2003945140]
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_rfcgh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1589092985]
+shape = SubResource("SphereShape3D_r0dna")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1749785202]
+mesh = SubResource("SphereMesh_b5aes")
+surface_material_override/0 = SubResource("StandardMaterial3D_k40wh")
